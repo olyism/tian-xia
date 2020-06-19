@@ -30,6 +30,15 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-react-css-modules`,
+      options: {
+        filetypes: {
+          ".scss": { syntax: `postcss-scss` },
+        },
+        exclude: `\/global\/`,
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
