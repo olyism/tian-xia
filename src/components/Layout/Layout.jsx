@@ -1,9 +1,11 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import useSiteMetadata from './SiteMetadata'
-import { withPrefix } from 'gatsby'
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import Footer from '../Footer';
+import Navbar from '../Navbar';
+import useSiteMetadata from '../SiteMetadata';
+import { withPrefix } from 'gatsby';
+import '../../scss/resets.scss';
+import '../../scss/typography.scss';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()

@@ -9,13 +9,13 @@ $gutter-width: 30px;
 $container-width: 1280px;
 $spacing: (
   1: $bc,
-  2: $bc * 2,
-  3: $bc * 3,
-  5: $bc * 5,
-  8: $bc * 8,
-  13: $bc * 13,
-  21: $bc * 21,
-  34: $bc * 34
+  2: $bc * 2px,
+  3: $bc * 3px,
+  5: $bc * 5px,
+  8: $bc * 8px,
+  13: $bc * 13px,
+  21: $bc * 21px,
+  34: $bc * 34px
 );
 $bp: (
   sm: 768px,
@@ -23,6 +23,7 @@ $bp: (
   lg: 1280px
 );
 $font-size-base: 14px;
+$line-height-base: map-get($spacing, 5);
 
 // # Colors
 
@@ -36,7 +37,7 @@ $iron: #D9D9DB;
 $white: #fff;
 
 // ## Yellows
-$apache: #E3C36F;
+$apache: #E3C36F; 
 $costa-del-sol: #5E512E;
 $brandy: #DDD0AE;
 
@@ -58,7 +59,7 @@ $sea-mist: #C5DEC8;
 $greens: (
   main: $pastel-green,
   dark: $killarney,
-  tone100: $seamist,
+  tone100: $sea-mist,
   tone80: #D1E5D3,
   tone60: #DCEBDE,
   tone40: #E8F2E9,
@@ -107,6 +108,13 @@ $grays: (
 
 // ### Warning
 $color-warning: (
-  $border: map-get($yellows, dark)
-  $background: map-get($yellows, main)
+  border: map-get($yellows, dark),
+  background: map-get($yellows, main)
+);
+
+// # Typography
+$font-families: (
+  system: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"),
+  serif: ("Merriweather", serif),
+  sans-serif: ("Lato", sans-serif)
 );
