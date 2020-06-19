@@ -1,0 +1,112 @@
+// Settings
+// ========
+
+// # Browser context
+$bc: 4;
+
+// # Key dimensions
+$gutter-width: 30px;
+$container-width: 1280px;
+$spacing: (
+  1: $bc,
+  2: $bc * 2,
+  3: $bc * 3,
+  5: $bc * 5,
+  8: $bc * 8,
+  13: $bc * 13,
+  21: $bc * 21,
+  34: $bc * 34
+);
+$bp: (
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px
+);
+$font-size-base: 14px;
+
+// # Colors
+
+// ## Grays
+$black: #000;
+$tuna: #353536;
+$abbey: #4D4D4E;
+$scarpa-flow: #5B5B5C;
+$montrose: #9A9A9C;
+$iron: #D9D9DB;
+$white: #fff;
+
+// ## Yellows
+$apache: #E3C36F;
+$costa-del-sol: #5E512E;
+$brandy: #DDD0AE;
+
+$yellows: (
+  main: $apache,
+  dark: $costa-del-sol,
+  tone100: $brandy,
+  tone80: #E4D9BE,
+  tone60: #EBE3CE,
+  tone40: #F1ECDF,
+  tone20: #F8F6EF
+);
+
+// ## Greens
+$pastel-green: #86E391;
+$killarney: #385E3C;
+$sea-mist: #C5DEC8;
+
+$greens: (
+  main: $pastel-green,
+  dark: $killarney,
+  tone100: $seamist,
+  tone80: #D1E5D3,
+  tone60: #DCEBDE,
+  tone40: #E8F2E9,
+  tone20: #F3F8F4
+);
+
+// ## Blues
+$royal-blue: #597EE3;
+$cloud-burst: #25345E;
+$cold-purple: #99ABDE;
+
+$blues: (
+  main: $royal-blue,
+  dark: $cloud-burst,
+  tone100: $cold-purple,
+  tone80: #ADBCE5,
+  tone60: #C2CDEB,
+  tone40: #D6DDF2,
+  tone20: #EBEEF8
+);
+
+// ## Reds
+$deep-blush: #E36491;
+$buccaneer: #5E2A3C;
+$can-can: #DEA4B8;
+
+$reds: (
+  main: $deep-blush,
+  dark: $buccaneer,
+  tone100: $can-can,
+  tone80: #E5B6C6,
+  tone60: #EBC8D4,
+  tone40: #F2DBE3,
+  tone20: #F8EDF1
+);
+
+// ## Contextual colors
+$link-color: map-get($blues, dark);
+
+// ### Grayscale
+$grays: (
+  heading: $black,
+  text: $abbey,
+  subtext: $scarpa-flow
+);
+
+// ### Warning
+$color-warning: (
+  $border: map-get($yellows, dark)
+  $background: map-get($yellows, main)
+);
