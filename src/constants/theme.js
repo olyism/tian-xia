@@ -1,6 +1,6 @@
 const BROWSER_CONTEXT = 4;
 
-const GUTTER_WIDTH = '30px';
+const GUTTER_WIDTH = '15px';
 
 const CONTAINER_WIDTH = '1280px';
 
