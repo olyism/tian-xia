@@ -1,11 +1,25 @@
 import React from 'react';
+import { styled, createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
+import { withPrefix } from 'gatsby';
+import TypographyStyles from './TypographyStyles';
 import Footer from '../Footer';
 import Navbar from '../Navbar';
 import useSiteMetadata from '../SiteMetadata';
-import { withPrefix } from 'gatsby';
-import '../../scss/resets.scss';
-import '../../scss/typography.scss';
+
+const ResetStyles = createGlobalStyle`
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  main {
+    display: block;
+  }
+`;
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -49,6 +63,8 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
+      <ResetStyles />
+      <TypographyStyles />
       <Navbar />
       <main>{children}</main>
       <Footer />
