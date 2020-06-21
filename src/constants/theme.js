@@ -4,6 +4,21 @@ const GUTTER_WIDTH = '15px';
 
 const CONTAINER_WIDTH = '1280px';
 
+const COLUMN_WIDTH = {
+  '1': '8.3333%',
+  '2': '16.6667%',
+  '3': '25%',
+  '4': '33.3333%',
+  '5': '41.6667%',
+  '6': '50%',
+  '7': '58.3333%',
+  '8': '66.6667%',
+  '9': '75%',
+  '10': '83.3333%',
+  '11': '91.6667%',
+  '12': '100%',
+};
+
 const BREAKPOINTS = {
   XS: '375px',
   SM: '768px',
@@ -125,6 +140,7 @@ export {
   BROWSER_CONTEXT,
   GUTTER_WIDTH,
   CONTAINER_WIDTH,
+  COLUMN_WIDTH,
   BREAKPOINTS,
   SPACING,
   COLOR,
