@@ -21,8 +21,11 @@ const COLUMN_WIDTH = {
 
 const BREAKPOINTS = {
   XS: '375px',
+  XS_MAX: '767px',
   SM: '768px',
+  SM_MAX: '1023px',
   MD: '1024px',
+  MD_MAX: '1279px',
   LG: '1280px',
 };
 
@@ -218,6 +221,12 @@ const PARAGRAPH = {
   MARGIN_TOP: `${SPACING['0']}`,
 };
 
+const SHADOW = '0px 4px 8px rgba(0, 0, 0, .15)';
+
+const Z_INDEX = {
+  STICKY: 100,
+};
+
 export {
   BROWSER_CONTEXT,
   GUTTER_WIDTH,
@@ -233,4 +242,6 @@ export {
   LINE_HEIGHT,
   HEADING,
   PARAGRAPH,
+  SHADOW,
+  Z_INDEX,
 };
