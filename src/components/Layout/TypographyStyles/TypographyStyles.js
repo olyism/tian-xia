@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import { 
   CONTEXTUAL_COLOR,
-  FONT_SIZE_BASE, 
-  LINE_HEIGHT_BASE, 
+  FONT_SIZE, 
+  LINE_HEIGHT, 
   FONT_FAMILY, 
   FONT_STACK 
 } from '../../../constants/theme.js';
@@ -101,8 +101,8 @@ const TypographyStyles = createGlobalStyle`
   body {
     color: ${CONTEXTUAL_COLOR.TEXT};
     font-family: ${SANS_SERIF};
-    font-size: ${FONT_SIZE_BASE};
-    line-height: ${LINE_HEIGHT_BASE};
+    font-size: ${FONT_SIZE.BASE};
+    line-height: ${LINE_HEIGHT.BASE};
   }
 `;
 
