@@ -74,6 +74,7 @@ const COLOR = {
 
 const CONTEXTUAL_COLOR = {
   HEADING: COLOR.TUNA,
+  SUBHEADING: COLOR.TUNA,
   TEXT: COLOR.ABBEY,
   SUBTEXT: COLOR.SCARPA_FLOW,
 
@@ -221,7 +222,10 @@ const PARAGRAPH = {
   MARGIN_TOP: `${SPACING['0']}`,
 };
 
-const SHADOW = '0px 4px 8px rgba(0, 0, 0, .15)';
+const SHADOW = {
+  BOX: '0px 4px 8px rgba(0, 0, 0, .15)',
+  TEXT: '0px 2px 2px rgba(0, 0, 0, 0.25)',
+};
 
 const Z_INDEX = {
   STICKY: 100,
