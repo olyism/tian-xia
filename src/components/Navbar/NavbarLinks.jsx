@@ -1,24 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { BREAKPOINTS, CONTEXTUAL_COLOR } from '../../constants/theme.js';
+import { BREAKPOINTS, CONTEXTUAL_COLOR, SPACING } from '../../constants/theme.js';
 
-const StyledList = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-`;
-
-const StyledItem = styled.li`
-  display: inline-block;
-`;
-
-const StyledLink = styled(Link)`
-  color: ${CONTEXTUAL_COLOR.LINK};
-  text-decoration: none;
-`;
-
-const StyledNavbarLinks = styled.nav`
+const StyledNav = styled.nav`
   display: none;
   margin-left: auto;
 
@@ -27,16 +12,35 @@ const StyledNavbarLinks = styled.nav`
   }
 `;
 
+const StyledList = styled.ul`
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
+const StyledItem = styled.li`
+  margin-left: ${SPACING['8']};
+`;
+
+const GatsbyLink = ({ className, children, to }) => <Link className={className} to={to}>{children}</Link>;
+
+const StyledLink = styled(GatsbyLink)`
+  color: ${CONTEXTUAL_COLOR.HEADING};
+  font-weight: bold;
+  text-decoration: none;
+`;
+
 const NavbarLinks = () => (
-  <StyledNavbarLinks>
+  <StyledNav>
     <StyledList>
       <StyledItem><StyledLink to="/">Home</StyledLink></StyledItem>
       <StyledItem><StyledLink to="/#about-us">About us</StyledLink></StyledItem>
-      <StyledItem><StyledLink to="/#what-we-offer">Home</StyledLink></StyledItem>
-      <StyledItem><StyledLink to="/#testimonials">Home</StyledLink></StyledItem>
+      <StyledItem><StyledLink to="/#what-we-offer">What we offer</StyledLink></StyledItem>
+      <StyledItem><StyledLink to="/#testimonials">Testimonials</StyledLink></StyledItem>
       <StyledItem><StyledLink to="/enquire">Enquire</StyledLink></StyledItem>
     </StyledList>
-  </StyledNavbarLinks>
+  </StyledNav>
 );
 
 export default NavbarLinks;
