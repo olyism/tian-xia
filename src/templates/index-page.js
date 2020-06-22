@@ -14,12 +14,12 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => (
-  <Layout>
+  <>
     <Hero 
       heading="Tianxia Academy Fellowship" 
       subheading="Empowering the future leaders and thinkers to contribute towards an equitable and harmonious future." 
     />
-  </Layout>
+  </>
 )
 
 IndexPageTemplate.propTypes = {

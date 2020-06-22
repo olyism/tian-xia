@@ -19,6 +19,7 @@ const StyledBackground = styled.div`
   align-items: flex-end;
   background: ${COLOR.ABBEY} url('${img}') 50% 50% no-repeat;
   background-size: cover;
+  box-sizing: border-box;
   display: flex;
   height: 100vh;
   min-height: 667px;

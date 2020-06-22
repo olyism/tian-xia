@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { withPrefix } from 'gatsby';
 import TypographyStyles from './TypographyStyles';
@@ -18,6 +18,10 @@ const ResetStyles = createGlobalStyle`
 
   main {
     display: block;
+  }
+
+  img {
+    border-style: none;
   }
 `;
 
