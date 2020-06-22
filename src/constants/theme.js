@@ -152,7 +152,7 @@ const LINE_HEIGHT = {
   SUBTEXT: `${SPACING['5']}`,
   LEAD: `${SPACING['8']}`,
   SUBHEADING: `${SPACING['13']}`,
-  HEADING: `${SPACING['21']}`,
+  HEADING: `${SPACING['13']}`,
 };
 
 const HEADING = {
@@ -228,6 +228,7 @@ const SHADOW = {
 };
 
 const Z_INDEX = {
+  FLOATING: 10,
   STICKY: 100,
 };
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FONT_STACK, HEADING, PARAGRAPH } from '../../constants/theme.js';
+import { FONT_STACK, FONT_SIZE, HEADING, PARAGRAPH } from '../../constants/theme.js';
 
 const {
   H1,
@@ -88,3 +88,5 @@ const Typography = styled.div`
     font-size: ${FONT_SIZE.SUBTEXT};
   }
 `;
+
+export default Typography;

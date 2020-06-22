@@ -11,7 +11,7 @@ import logo from '../../img/logo.svg'
 
 const StyledNavbar = styled.div`
   background: ${COLOR.WHITE};
-  box-shadow: ${SHADOW};
+  box-shadow: ${SHADOW.BOX};
   box-sizing: border-box;
   left: 0px;
   padding-bottom: ${SPACING['3']};

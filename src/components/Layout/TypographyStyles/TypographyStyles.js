@@ -98,6 +98,7 @@ const TypographyStyles = createGlobalStyle`
         url('${MerriweatherBoldItalicWoff}') format('woff');
   }
 
+  html,
   body {
     color: ${CONTEXTUAL_COLOR.TEXT};
     font-family: ${SANS_SERIF};
