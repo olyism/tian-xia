@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero';
 import Heading from '../components/Heading';
 import Paragraph from '../components/Paragraph';
+import Callout from '../components/Callout';
 import { 
   FONT_SIZE,
   FONT_STACK,
@@ -62,6 +63,7 @@ export const IndexPageTemplate = ({
           <StyledLI>Fluent in English and at least conversational in Mandarin Chinese</StyledLI>
         </StyledUL>
         <Paragraph>The program scales up participants’ capabilities for improving the world and provides a lifelong network for mentorship and collaborations.</Paragraph>
+        <Callout />
       </StyledContent>
     </section>
   </>

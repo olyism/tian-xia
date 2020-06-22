@@ -223,7 +223,7 @@ const PARAGRAPH = {
 };
 
 const BORDER_RADIUS = {
-  CORNER: '8px',
+  CORNER: '16px',
   CIRCLE: '50%',
 };
 
