@@ -29,13 +29,17 @@ const StyledLink = styled.a`
 
 const StyledHeading = styled(Heading)`
   color: ${COLOR.WHITE};
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 620px;
   text-shadow: ${SHADOW.TEXT};
 `;
 
 const StyledCards = styled.div`
   align-items: stretch;
   display: flex;
-  margin-bottom: 100px;
+  margin: 0 auto 100px;
+  max-width: 620px;
 `;
 
 const StyledViewport = styled.div`
@@ -48,10 +52,6 @@ const Footer = () => (
       <Row>
         <Col>
           <StyledHeading level="2">Fellows' experience</StyledHeading>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
           <StyledCards>
             <Card 
               quote="The Tianxia fellowship was the most concentrated dose of big thinking, new ideas, innovative (and effective) organizations, and amazing people that I have encountered in my professional life." 
