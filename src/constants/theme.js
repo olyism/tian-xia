@@ -222,6 +222,11 @@ const PARAGRAPH = {
   MARGIN_TOP: `${SPACING['0']}`,
 };
 
+const BORDER_RADIUS = {
+  CORNER: '8px',
+  CIRCLE: '50%',
+};
+
 const SHADOW = {
   BOX: '0px 4px 8px rgba(0, 0, 0, .15)',
   TEXT: '0px 2px 2px rgba(0, 0, 0, 0.25)',
@@ -247,6 +252,7 @@ export {
   LINE_HEIGHT,
   HEADING,
   PARAGRAPH,
+  BORDER_RADIUS,
   SHADOW,
   Z_INDEX,
 };
