@@ -229,6 +229,7 @@ const BORDER_RADIUS = {
 
 const SHADOW = {
   BOX: '0px 4px 8px rgba(0, 0, 0, .15)',
+  BUTTON: '0 0 15px rgba(0, 0, 0, .2)',
   TEXT: '0px 2px 2px rgba(0, 0, 0, 0.25)',
 };
 
