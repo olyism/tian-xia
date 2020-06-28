@@ -2,63 +2,77 @@ import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, node, oneOf, oneOfType, string } from 'prop-types';
 import { 
-  BORDER_RADIUS,
   BREAKPOINTS,
   COLOR, 
   FONT_SIZE,
   LINE_HEIGHT,
-  SPACING 
 } from '../../constants/theme.js'
 
-const ButtonType = ({ type, to, className, children }) => {
-  const TagName = type;
+const ButtonStyle = ({ tagName, to, btnStyle, className, children }) => {
+  const TagName = tagName;
   return <TagName className={className} type="button" href={to}>{children}</TagName>
 };
 
-const Button = styled(ButtonType)`
-  background: ${COLOR.CLOUD_BURST};
+const Button = styled(ButtonStyle)`
+  background: transparent;
   border: 2px solid ${COLOR.CLOUD_BURST};
+  box-sizing: border-box;
   border-radius: 28px;
-  color: ${COLOR.WHITE};
+  color: ${COLOR.CLOUD_BURST};
   display: block;
-  font-weight: bold;
   font-size: ${FONT_SIZE.BASE};
+  font-weight: bold;
   line-height: ${LINE_HEIGHT.BASE};
-  min-width: 80px;
+  min-width: 120px;
   padding: 16px 20px;
-  position: relative;
   text-decoration: none;
   text-align: center;
-  transition: background-color .25s;
-
-  &:hover {
-    background-color: ${COLOR.BLACK};
-  }
+  transition: background-color .25s, border-color .25s;
 
   @media (min-width: ${BREAKPOINTS.MD}) {
     display: inline-block;
   }
 
-  &::after {
-    border: 2px solid ${COLOR.WHITE};
-    border-radius: 24px;
-    content: " ";
-    height: calc(100% - 6px);
-    left: 1px;
-    position: absolute;
-    top: 1px;
-    transition: border-color .25s;
-    width: calc(100% - 6px);
+  ${({ btnStyle }) => {
+    if (btnStyle === 'primary') {
+      return `
+        background: ${COLOR.CLARET};
+        border: 2px solid ${COLOR.CLARET};
+        color: ${COLOR.WHITE};
+        position: relative;
 
-    &:hover {
-      border-color: ${COLOR.BLACK}; 
+        &:hover {
+          background-color: ${COLOR.TUNA};
+        }
+      `;
     }
-  }
+
+    if (btnStyle === 'default-white') {
+      return `
+        border-color: ${COLOR.WHITE};
+        color: ${COLOR.WHITE};
+      `;
+    }
+
+    if (btnStyle === 'primary-white') {
+      return `
+        background: ${COLOR.WHITE};
+        border-color: ${COLOR.CLARET};
+        color: ${COLOR.CLARET};
+        position: relative;
+
+        &:hover {
+          background-color: ${COLOR.IRON};
+        }
+      `;
+    }
+  }}
 `;
 
 Button.propTypes = {
-  type: oneOf(['a', 'button']),
+  tagName: oneOf(['a', 'button']),
   to: string,
+  btnStyle: oneOf(['default', 'primary', 'default-white', 'primary-white']),
   className: string,
   children: oneOfType([
     arrayOf(node),
@@ -67,7 +81,8 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  type: 'a',
+  tagName: 'a',
+  btnStyle: 'default',
   to: '',
   className: '',
 };

@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import Divider from '../components/Divider';
 import Hero from '../components/Hero';
 import Heading from '../components/Heading';
 import Paragraph from '../components/Paragraph';
@@ -93,6 +94,7 @@ export const IndexPageTemplate = ({
         <Paragraph>The Fellowship aims to cultivate leaders dedicated to improving the long-term future through macro-strategic work. This type of work targets areas that hold great transformative potential on the timescale of decades yet are being neglected by current mainstream efforts.</Paragraph>
       </StyledContent>
     </section>
+    <Divider />
     <section id="what-we-offer">
       <StyledContent>
         <Heading>What we offer</Heading>
@@ -107,12 +109,15 @@ export const IndexPageTemplate = ({
       </StyledContent>
     </section>
     { testimonialsData && 
-      <section id="testimonials">
-        <StyledContent>
-          <Heading>Our partners</Heading>
-          <Testimonials testimonials={testimonialsData} />
-        </StyledContent>
-      </section>
+      <>
+        <Divider />
+        <section id="testimonials">
+          <StyledContent>
+            <Heading>Our partners</Heading>
+            <Testimonials testimonials={testimonialsData} />
+          </StyledContent>
+        </section>
+      </>
     }
   </>
 );

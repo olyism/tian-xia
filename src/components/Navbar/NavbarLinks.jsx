@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components';
 import Scrollspy from 'react-scrollspy';
 import { BREAKPOINTS, COLOR, CONTEXTUAL_COLOR, SPACING } from '../../constants/theme.js';
+import Button from '../Button';
 
 const ScrollspyStyles = createGlobalStyle`
   .is-current-nav-link {
@@ -26,7 +27,6 @@ const StyledScrollspy = styled(Scrollspy)`
 `;
 
 const StyledLink = styled.a`
-  align-items: center;
   border-bottom: 2px solid ${COLOR.WHITE};
   box-sizing: border-box;
   color: ${CONTEXTUAL_COLOR.HEADING};
@@ -34,6 +34,12 @@ const StyledLink = styled.a`
   margin-left: ${SPACING['8']};
   padding-top: 2px;
   text-decoration: none;
+`;
+
+const StyledButton = styled(Button)`
+  margin-left: ${SPACING['8']};
+  min-width: 100px;
+  padding: 8px 16px;
 `;
 
 const NavbarLinks = () => (
@@ -50,12 +56,12 @@ const NavbarLinks = () => (
         currentClassName="is-current-nav-link"
         componentTag="div"
       >
-        <StyledLink to="/#home">Home</StyledLink>
-        <StyledLink to="/#about-us">About us</StyledLink>
-        <StyledLink to="/#what-we-offer">What we offer</StyledLink>
-        <StyledLink to="/#testimonials">Testimonials</StyledLink>
+        <StyledLink href="/#home">Home</StyledLink>
+        <StyledLink href="/#about-us">About us</StyledLink>
+        <StyledLink href="/#what-we-offer">What we offer</StyledLink>
+        <StyledLink href="/#testimonials">Testimonials</StyledLink>
       </StyledScrollspy>
-      <StyledLink to="mailto:info@tian-xia.com">Enquire</StyledLink>
+      <StyledButton href="mailto:info@tian-xia.com">Enquire</StyledButton>
     </StyledNav>
   </>
 );

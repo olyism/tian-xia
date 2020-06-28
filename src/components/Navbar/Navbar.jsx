@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 import { Link } from 'gatsby'
 import Container from '../Container';
-import Row from '../Row';
-import Col from '../Col';
 import { BROWSER_CONTEXT, COLOR, SHADOW, SPACING, Z_INDEX } from '../../constants/theme.js';
 import Hamburger from './Hamburger';
 import NavbarLinks from './NavbarLinks';
@@ -20,6 +18,11 @@ const StyledNavbar = styled.div`
   z-index: ${Z_INDEX.STICKY};
 `;
 
+const StyledNavbarContainer = styled(Container)`
+  align-items: center;
+  display: flex;
+`;
+
 const StyledLogo = styled.img`
   height: ${BROWSER_CONTEXT * 14}px;
   margin-bottom: ${SPACING['3']};
@@ -27,29 +30,24 @@ const StyledLogo = styled.img`
 `;
 
 const StyledAlignRight = styled.div`
-align-items: center;  
-display: flex;
+  align-items: center;  
+  display: flex;
   height: 100%;
+  margin-left: auto;
 `;
 
 const Navbar = () => (
   <header> 
     <StyledNavbar>
-      <Container>
-        <Row>
-          <Col>
-            <Link to="/">
-              <StyledLogo alt="Tianxia Fellowship logo" src={logo} />
-            </Link>
-          </Col>
-          <Col>
-            <StyledAlignRight>
-              <NavbarLinks />
-              <Hamburger />
-            </StyledAlignRight>
-          </Col>
-        </Row>
-      </Container>
+      <StyledNavbarContainer>
+        <Link to="/">
+          <StyledLogo alt="Tianxia Fellowship logo" src={logo} />
+        </Link>
+        <StyledAlignRight>
+          <NavbarLinks />
+          <Hamburger />
+        </StyledAlignRight>
+      </StyledNavbarContainer>
     </StyledNavbar>
   </header>
 );
