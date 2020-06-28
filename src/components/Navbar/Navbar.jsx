@@ -14,8 +14,6 @@ const StyledNavbar = styled.div`
   box-shadow: ${SHADOW.BOX};
   box-sizing: border-box;
   left: 0px;
-  padding-bottom: ${SPACING['3']};
-  padding-top: ${SPACING['3']};
   position: fixed;
   top: 0px;
   width: 100%;
@@ -24,6 +22,8 @@ const StyledNavbar = styled.div`
 
 const StyledLogo = styled.img`
   height: ${BROWSER_CONTEXT * 14}px;
+  margin-bottom: ${SPACING['3']};
+  margin-top: ${SPACING['3']};
 `;
 
 const StyledAlignRight = styled.div`
