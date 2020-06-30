@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import Divider from '../components/Divider';
 import Hero from '../components/Hero';
 import Heading from '../components/Heading';
 import Paragraph from '../components/Paragraph';
@@ -11,7 +12,6 @@ import Testimonials from '../components/Testimonials';
 import { 
   FONT_SIZE,
   FONT_STACK,
-  LINE_HEIGHT,
   GUTTER_WIDTH,
   SPACING
 } from '../constants/theme.js';
@@ -81,18 +81,21 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <>
-    <Hero 
-      heading="Tianxia Academy Fellowship" 
-      subheading="Empowering the future leaders and thinkers to contribute towards an equitable and harmonious future." 
-    />
-    <section>
+    <section id="home">
+      <Hero 
+        heading="Tianxia Academy Fellowship" 
+        subheading="Empowering the future leaders and thinkers to contribute towards an equitable and harmonious future." 
+      />
+    </section>
+    <section id="about-us">
       <StyledContent>
         <Heading>About us</Heading>
         <Paragraph>The world faces ever more complex and critical challenges. In an era of global interdependence, peoples, nations, and cultures must come together to rise above their common hurdles. “Tianxia (天下) ” is a Chinese term expressing the idea of a universal civilizational order under which life on Earth may flourish. Inspired by this ancient concept, the Tianxia Academy believes in empowering the future leaders and thinkers to contribute towards an equitable and harmonious future.</Paragraph>
         <Paragraph>The Fellowship aims to cultivate leaders dedicated to improving the long-term future through macro-strategic work. This type of work targets areas that hold great transformative potential on the timescale of decades yet are being neglected by current mainstream efforts.</Paragraph>
       </StyledContent>
     </section>
-    <section>
+    <Divider />
+    <section id="what-we-offer">
       <StyledContent>
         <Heading>What we offer</Heading>
         <Paragraph>We support students and early-career professionals who are:</Paragraph>
@@ -106,12 +109,15 @@ export const IndexPageTemplate = ({
       </StyledContent>
     </section>
     { testimonialsData && 
-      <section>
-        <StyledContent>
-          <Heading>Our partners</Heading>
-          <Testimonials testimonials={testimonialsData} />
-        </StyledContent>
-      </section>
+      <>
+        <Divider />
+        <section id="testimonials">
+          <StyledContent>
+            <Heading>Our partners</Heading>
+            <Testimonials testimonials={testimonialsData} />
+          </StyledContent>
+        </section>
+      </>
     }
   </>
 );

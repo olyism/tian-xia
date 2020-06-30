@@ -16,7 +16,7 @@ const StyledBlockquote = styled.blockquote`
   background: ${CONTEXTUAL_COLOR.WARNING.TONE20};
   border-radius: ${BORDER_RADIUS.CORNER};
   color: ${COLOR.TUNA};
-  font-family: ${FONT_STACK.SANS_SERIF};
+  font-family: ${FONT_STACK.SERIF};
   font-size: ${FONT_SIZE.TEXT};
   line-height: ${LINE_HEIGHT.TEXT};
   margin: 0 0 ${LINE_HEIGHT.BASE};
@@ -28,6 +28,7 @@ const StyledParagraph = styled.p`
 `;
 
 const StyledAuthor = styled.p`
+  font-family: ${FONT_STACK.SANS_SERIF};
   font-weight: bold;
   margin: ${LINE_HEIGHT.BASE} 0 0;
 `;
