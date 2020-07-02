@@ -65,7 +65,7 @@ const Footer = () => (
           Copyright &copy; {new Date().getFullYear()} Tianxia Fellowship. <StyledLink href="/terms">Terms of use</StyledLink>
         </Col>
         <Col style={{textAlign: 'right'}}>
-          Contact <StyledLink href="mailto:ziya@tian-xia.com">ziya@tian-xia.com</StyledLink>
+          Contact <StyledLink href="mailto:info@tian-xia.com">info@tian-xia.com</StyledLink>
         </Col>
       </Row>
     </Container>
