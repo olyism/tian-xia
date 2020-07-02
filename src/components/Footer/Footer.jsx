@@ -6,7 +6,7 @@ import Col from '../Col';
 import Heading from '../Heading';
 import Card from '../Card';
 import img from '../../img/patrick-xu-OMqYNbc0i4A-unsplash.jpg';
-import { COLOR, SHADOW, SPACING } from '../../constants/theme.js'
+import { COLOR, SHADOW, SPACING, Z_INDEX } from '../../constants/theme.js'
 
 const StyledFooter = styled.footer`
   background: ${COLOR.TUNA} url('${img}') 50% 50% no-repeat;
@@ -14,6 +14,24 @@ const StyledFooter = styled.footer`
   color: ${COLOR.WHITE};
   padding-bottom: ${SPACING[5]};
   padding-top: ${SPACING[13]};
+  position: relative;
+
+  &::after {
+    background: ${COLOR.CLARET};
+    content: " ";
+    height: 100%;
+    left: 0;
+    opacity: .85;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: ${Z_INDEX.FLOATING};
+  }
+`;
+
+const StyledFooterContainer = styled(Container)`
+  position: relative;
+  z-index: ${Z_INDEX.HOVERING};
 `;
 
 const StyledLink = styled.a`
@@ -29,9 +47,7 @@ const StyledLink = styled.a`
 
 const StyledHeading = styled(Heading)`
   color: ${COLOR.WHITE};
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 620px;
+  font-weight: normal;
   text-shadow: ${SHADOW.TEXT};
 `;
 
@@ -39,7 +55,6 @@ const StyledCards = styled.div`
   align-items: stretch;
   display: flex;
   margin: 0 auto 100px;
-  max-width: 620px;
 `;
 
 const StyledViewport = styled.div`
@@ -48,7 +63,7 @@ const StyledViewport = styled.div`
 
 const Footer = () => (
   <StyledFooter>
-    <Container>
+    <StyledFooterContainer>
       <Row>
         <Col>
           <StyledHeading level="2">Fellows' experience</StyledHeading>
@@ -65,10 +80,10 @@ const Footer = () => (
           Copyright &copy; {new Date().getFullYear()} Tianxia Fellowship. <StyledLink href="/terms">Terms of use</StyledLink>
         </Col>
         <Col style={{textAlign: 'right'}}>
-          Contact <StyledLink href="mailto:ziya@tian-xia.com">ziya@tian-xia.com</StyledLink>
+          Contact <StyledLink href="mailto:info@tian-xia.com">info@tian-xia.com</StyledLink>
         </Col>
       </Row>
-    </Container>
+    </StyledFooterContainer>
   </StyledFooter>
 );
 
