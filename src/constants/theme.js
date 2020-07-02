@@ -235,6 +235,7 @@ const SHADOW = {
 
 const Z_INDEX = {
   FLOATING: 10,
+  HOVERING: 20,
   STICKY: 100,
 };
 
