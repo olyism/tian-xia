@@ -77,9 +77,6 @@ export const IndexPageTemplate = ({
   hero,
   about,
   whatWeOffer,
-  mainpitch,
-  description,
-  intro,
 }) => (
   <>
     <section id="home">
@@ -122,16 +119,11 @@ IndexPageTemplate.propTypes = {
   hero: PropTypes.object,
   about: PropTypes.object,
   whatWeOffer: PropTypes.object,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+console.log(frontmatter);
   return (
     <Layout>
       <IndexPageTemplate
@@ -139,9 +131,6 @@ const IndexPage = ({ data }) => {
         hero={frontmatter.hero}
         about={frontmatter.about}
         whatWeOffer={frontmatter.whatWeOffer}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
@@ -174,25 +163,6 @@ export const pageQuery = graphql`
         whatWeOffer {
           title
           body
-        }
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
         }
       }
     }
