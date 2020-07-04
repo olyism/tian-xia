@@ -7,6 +7,7 @@ hero:
   heading: Tianxia Academy Fellowship
   subheading: Empowering the future leaders and thinkers to contribute towards an
     equitable and harmonious future.
+  image: /img/ken-lawrence-tdpmstdpdum-unsplash.jpg
 mainpitch:
   title: Why Kaldi
   description: >
