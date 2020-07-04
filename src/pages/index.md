@@ -2,7 +2,7 @@
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 templateKey: index-page
-title: Great coffee with a conscience
+title: Tianxia Academy Fellowship
 hero:
   heading: Tianxia Academy Fellowship
   subheading: Empowering the future leaders and thinkers to contribute towards an
