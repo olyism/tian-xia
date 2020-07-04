@@ -76,6 +76,7 @@ export const IndexPageTemplate = ({
   title,
   hero,
   about,
+  whatWeOffer,
   mainpitch,
   description,
   intro,
@@ -91,20 +92,14 @@ export const IndexPageTemplate = ({
     <section id="about-us">
       <StyledContent>
         <Heading>{about.title}</Heading>
-        <Typography dangerouslySetInnerHTML={{ __html: about.content }} />
+        <Typography dangerouslySetInnerHTML={{ __html: about.body }} />
       </StyledContent>
     </section>
     <Divider />
     <section id="what-we-offer">
       <StyledContent>
-        <Heading>What we offer</Heading>
-        <Paragraph>We support students and early-career professionals who are:</Paragraph>
-        <StyledUL>
-          <StyledLI>Dedicated to accomplishing global humanitarian outcomes for the long-term future</StyledLI>
-          <StyledLI>Culturally aware, reflective, and entrepreneurial</StyledLI>
-          <StyledLI>Fluent in English and at least conversational in Mandarin Chinese</StyledLI>
-        </StyledUL>
-        <Paragraph>The program scales up participants’ capabilities for improving the world and provides a lifelong network for mentorship and collaborations.</Paragraph>
+        <Heading>{whatWeOffer.title}</Heading>
+        <Typography dangerouslySetInnerHTML={{ __html: whatWeOffer.body }} />
         <Callout />
       </StyledContent>
     </section>
@@ -126,6 +121,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   hero: PropTypes.object,
   about: PropTypes.object,
+  whatWeOffer: PropTypes.object,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -142,6 +138,7 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         hero={frontmatter.hero}
         about={frontmatter.about}
+        whatWeOffer={frontmatter.whatWeOffer}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -172,7 +169,11 @@ export const pageQuery = graphql`
         }
         about {
           title
-          content
+          body
+        }
+        whatWeOffer {
+          title
+          body
         }
         mainpitch {
           title
