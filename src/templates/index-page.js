@@ -72,10 +72,8 @@ const testimonialsData = [
 ];
 
 export const IndexPageTemplate = ({
-  image,
   title,
-  heading,
-  subheading,
+  hero,
   mainpitch,
   description,
   intro,
@@ -83,8 +81,9 @@ export const IndexPageTemplate = ({
   <>
     <section id="home">
       <Hero 
-        heading="Tianxia Academy Fellowship" 
-        subheading="Empowering the future leaders and thinkers to contribute towards an equitable and harmonious future." 
+        heading={hero.heading} 
+        subheading={hero.subheading} 
+        backgroundImage={hero.image}
       />
     </section>
     <section id="about-us">
@@ -123,10 +122,8 @@ export const IndexPageTemplate = ({
 );
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
+  hero: PropTypes.object,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -140,10 +137,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
+        hero={frontmatter.hero}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -167,15 +162,11 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+        hero {
+          heading
+          subheading
+          image
         }
-        heading
-        subheading
         mainpitch {
           title
           description

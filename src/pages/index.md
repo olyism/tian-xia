@@ -1,7 +1,10 @@
 ---
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
 templateKey: index-page
+title: Tianxia Academy Fellowship
+hero:
+  heading: Tianxia Academy Fellowship
+  subheading: Empowering the future leaders and thinkers to contribute towards an equitable and harmonious future.
+  image: /img/ken-lawrence-tDPMSTDPdUM-unsplash.jpg
 mainpitch:
   title: Why Kaldi
   description: >
