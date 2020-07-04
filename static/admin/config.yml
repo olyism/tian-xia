@@ -56,6 +56,23 @@ collections:
             fields:
             - {label: Title, name: title, widget: string}
             - {label: Body, name: body, widget: markdown}
+          - label: Partners
+            name: partners
+            widget: list
+            fields:
+            - label: Title
+              name: title
+              widget: string
+            - label: Testimonials
+              name: testimonials
+              widget: list
+              fields:
+              - label: Quote
+                name: quote
+                widget: string
+              - label: Author
+                name: author
+                widget: string
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
