@@ -17,7 +17,7 @@ about:
     expressing the idea of a universal civilizational order under which life on
     Earth may flourish. Inspired by this ancient concept, the Tianxia Academy
     believes in empowering the future leaders and thinkers to contribute towards
-    an equitable and harmonious future.
+    an equitable and harmonious future. 
 
 
     The Fellowship aims to cultivate leaders dedicated to improving the long-term future through macro-strategic work. This type of work targets areas that hold great transformative potential on the timescale of decades yet are being neglected by current mainstream efforts.
