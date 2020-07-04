@@ -57,7 +57,7 @@ const StyledLogoLI = styled.li`
 
 const StyledLogoButton = styled.button`
   background: ${COLOR.WHITE};
-  border: 1px solid ${COLOR.IRON};
+  border: 2px solid ${COLOR.IRON};
   border-radius: ${BORDER_RADIUS.CORNER};
   cursor: pointer;
   display: flex;
@@ -72,7 +72,7 @@ const StyledLogoButton = styled.button`
 
   ${({active}) => (active && (`
     @media (min-width: ${BREAKPOINTS.SM}) {
-      box-shadow: ${SHADOW.BUTTON};
+      border-color: ${COLOR.CLARET};
     }
   `))}
 `;
