@@ -7,6 +7,7 @@ import Divider from '../components/Divider';
 import Hero from '../components/Hero';
 import Heading from '../components/Heading';
 import Paragraph from '../components/Paragraph';
+import Typography from '../components/Typography';
 import Callout from '../components/Callout';
 import Testimonials from '../components/Testimonials';
 import { 
@@ -74,6 +75,7 @@ const testimonialsData = [
 export const IndexPageTemplate = ({
   title,
   hero,
+  about,
   mainpitch,
   description,
   intro,
@@ -88,9 +90,8 @@ export const IndexPageTemplate = ({
     </section>
     <section id="about-us">
       <StyledContent>
-        <Heading>About us</Heading>
-        <Paragraph>The world faces ever more complex and critical challenges. In an era of global interdependence, peoples, nations, and cultures must come together to rise above their common hurdles. “Tianxia (天下) ” is a Chinese term expressing the idea of a universal civilizational order under which life on Earth may flourish. Inspired by this ancient concept, the Tianxia Academy believes in empowering the future leaders and thinkers to contribute towards an equitable and harmonious future.</Paragraph>
-        <Paragraph>The Fellowship aims to cultivate leaders dedicated to improving the long-term future through macro-strategic work. This type of work targets areas that hold great transformative potential on the timescale of decades yet are being neglected by current mainstream efforts.</Paragraph>
+        <Heading>{about.title}</Heading>
+        <Typography dangerouslySetInnerHTML={{ __html: about.content }} />
       </StyledContent>
     </section>
     <Divider />
@@ -124,6 +125,7 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   hero: PropTypes.object,
+  about: PropTypes.object,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -139,6 +141,7 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         title={frontmatter.title}
         hero={frontmatter.hero}
+        about={frontmatter.about}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -166,6 +169,10 @@ export const pageQuery = graphql`
           heading
           subheading
           image
+        }
+        about {
+          title
+          content
         }
         mainpitch {
           title
