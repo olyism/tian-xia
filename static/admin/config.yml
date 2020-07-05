@@ -28,8 +28,8 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
-  - name: "pages"
-    label: "Pages"
+  - name: "templatePages"
+    label: "Tempalte pages"
     files:
       - file: "src/pages/index.md"
         label: "Homepage"
@@ -60,9 +60,12 @@ collections:
             name: partners
             widget: list
             fields:
-            - label: Title
-              name: title
+            - label: Name
+              name: name
               widget: string
+            - label: Logo
+              name: logo
+              widget: image
             - label: Testimonials
               name: testimonials
               widget: list
@@ -73,3 +76,9 @@ collections:
               - label: Author
                 name: author
                 widget: string
+          - label: Testimonials
+            name: testimonials
+            widget: list
+            fields:
+            - {label: Quote, name: quote, widget: string }
+            - {label: Author, name: author, widget: string, required: false }
