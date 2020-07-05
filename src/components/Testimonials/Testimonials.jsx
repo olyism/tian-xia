@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { 
   arrayOf,
@@ -19,8 +19,6 @@ import {
 } from '../../constants/theme.js';
 import Blockquote from '../Blockquote';
 
-const LogoImg = ({ alt, className, src, }) => <img alt={alt} className={className} src={src} />;
-
 const StyledContainer = styled.div`
   margin-bottom: ${SPACING['13']};
 `;
@@ -32,9 +30,36 @@ const StyledBlockquoteOL = styled.ol`
   padding: 0;
 `;
 
-const StyledBlockquoteLI = styled.li`
+const BlockquoteLI = ({ quote, author, isPreviouslyEmployed, active, i, className}) => (
+  <li key={`testimonial-quote-${i}`} i={i} active={active} className={className}>
+    <Blockquote 
+      quote={quote} 
+      author={author} 
+      smallPrint={
+        isPreviouslyEmployed 
+        ? {
+          label: '1',
+          content: 'This referee was formerly employed at this role.'
+        }
+        : {}
+      } 
+    />
+  </li>
+);
+
+const StyledBlockquoteLI = styled(BlockquoteLI)`
   display: none;
   margin: 0;
+
+  ${({ active, i }) => {
+    if (active === i) {
+      return `
+        @media (min-width: ${BREAKPOINTS.SM}) {
+          display: block;
+        }
+      `
+    }
+  }}
 `;
 
 const StyledLogoOL = styled.ol`
@@ -44,48 +69,64 @@ const StyledLogoOL = styled.ol`
   margin: 0 auto;
   padding: 0;
 
-  @media (min-width: 620px) {
-    max-width: 620px;
-  }
-
   @media (min-width: ${BREAKPOINTS.SM}) {
     flex-direction: row;
     justify-content: center;
   }
 `;
 
-const LogoLI = ({partnerName, logo, active, i, className}) => (
+const LogoLI = ({partnerName, logo, active, setActive, i, className}) => (
   <li key={`testimonial-logo-${i}`} i={i} className={className}>
-    <StyledLogoButton active={active}>
-      <StyledLogoButtonImg alt={partnerName} src={logo} />
-      <StyledLogoButtonLink>View testimonial</StyledLogoButtonLink>
-    </StyledLogoButton>
+    <StyledLogoButton
+      partnerName={partnerName}
+      logo={logo}
+      active={active} 
+      i={i} 
+      setActive={setActive}
+    />
   </li>
 );
 
 const StyledLogoLI = styled(LogoLI)`
   flex: 1;
   margin: 0 0 ${LINE_HEIGHT.BASE};
-  padding: 0 ${GUTTER_WIDTH};
 
   @media (min-width: ${BREAKPOINTS.SM}) {
-    max-width: 183px;
+    max-width: 186px;
+    padding: 0 ${GUTTER_WIDTH};
   }
 
   ${({ i }) => {
     if ((i + 1) % 6 === 0) {
       return `
         &::after {
-          content: " ";
-          flex-basis: 100%;
-          height: 0;
+          @media (min-width: ${BREAKPOINTS.SM}) {
+            content: " ";
+            flex-basis: 100%;
+            height: 0;
+          }
         }
       `;
     }
   }}
 `;
 
-const StyledLogoButton = styled.button`
+const LogoButton = ({ partnerName, logo, i, active, setActive, className }) => (
+  <button 
+    active={active} 
+    className={className} 
+    i={i} 
+    onClick={() => {
+      setActive(i);
+  }}>
+    <StyledLogoButtonImg alt={partnerName} src={logo} />
+    <StyledLogoButtonLink style={active !== i ? {} : {display: 'none'}}>
+      View testimonial
+    </StyledLogoButtonLink>
+  </button>
+);
+
+const StyledLogoButton = styled(LogoButton)`
   background: ${COLOR.WHITE};
   border: 2px solid ${COLOR.IRON};
   border-radius: ${BORDER_RADIUS.CORNER};
@@ -98,18 +139,18 @@ const StyledLogoButton = styled.button`
 
   @media (min-width: ${BREAKPOINTS.SM}) {
     height: 144px;
+
+    ${({ active, i }) => (active === i && (`
+      border-color: ${COLOR.CLARET};
+    `))}
   }
 
   &:hover {
     box-shadow: ${SHADOW.BUTTON};
   }
-
-  ${({active}) => (active && (`
-    @media (min-width: ${BREAKPOINTS.SM}) {
-      border-color: ${COLOR.CLARET};
-    }
-  `))}
 `;
+
+const LogoImg = ({ alt, className, src, }) => <img alt={alt} className={className} src={src} />;
 
 const StyledLogoButtonImg = styled(LogoImg)`
   display: block;
@@ -120,41 +161,36 @@ const StyledLogoButtonImg = styled(LogoImg)`
 const StyledLogoButtonLink = styled.span`
   border-bottom: 1px solid ${CONTEXTUAL_COLOR.INFO.TONE40};
   color: ${CONTEXTUAL_COLOR.LINK.LINK};
+  display: none;
   font-size: ${FONT_SIZE.SUBTEXT};
-  display: inline-block;
   margin: auto auto 0;
   text-align: center;
+
+  @media (min-width: ${BREAKPOINTS.SM}) {
+    display: inline-block;
+  }
 `;
 
-const smallPrint = {
-  label: '1',
-  content: 'This referee was formerly employed at this role.'
-};
-
 const Testimonials = ({ testimonials }) => {
+  const [active, setActive] = useState(0);
+
   if (testimonials) {
     return (
       <StyledContainer>
         <StyledBlockquoteOL>
-          {testimonials.map((testimonial, i) => {
-            const smallPrint = testimonial.isPreviouslyEmployed ? smallPrint : {};
-
-            return (
-              <StyledBlockquoteLI key={`testimonial-quote-${i}`} style={testimonial.active && { display: 'block'}}>
-                <Blockquote quote={testimonial.quotes[0].quote} author={testimonial.quotes[0].author} smallPrint={smallPrint} />
-              </StyledBlockquoteLI>
-            );
-          })}
+          {testimonials.map((testimonial, i) => (
+              <StyledBlockquoteLI
+                quote={testimonial.quotes[0].quote}
+                author={testimonial.quotes[0].author}
+                isPreviouslyEmployed={testimonial.isPreviouslyEmployed}
+                i={i}
+                active={active}
+                key={`testimonial-quote-${i}`}
+              />
+          ))}
         </StyledBlockquoteOL>
         <StyledLogoOL>
-          {testimonials.map((testimonial, i) => (
-            <StyledLogoLI key={`testimonial-logo-${i}`} i={i} partnerName={testimonial.partnerName} logo={testimonial.logo} active={testimonial.active}>
-              <StyledLogoButton active={testimonial.active}>
-                <StyledLogoButtonImg alt={testimonial.partnerName} src={testimonial.logo} />
-                <StyledLogoButtonLink>View testimonial</StyledLogoButtonLink>
-              </StyledLogoButton>
-            </StyledLogoLI>
-          ))}
+          {testimonials.map((testimonial, i) => <StyledLogoLI key={`testimonial-logo-${i}`} i={i} partnerName={testimonial.partnerName} logo={testimonial.logo} active={active} setActive={setActive} />)}
         </StyledLogoOL>
       </StyledContainer>
     );
@@ -170,7 +206,6 @@ Testimonials.propTypes = {
     })),
     logo: string.isRequired,
     partnerName: string.isRequired,
-    active: bool.isRequired,
   })),
 };
 

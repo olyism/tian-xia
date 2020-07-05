@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
+import Container from '../components/Container';
 import Divider from '../components/Divider';
 import Hero from '../components/Hero';
 import Heading from '../components/Heading';
@@ -62,8 +63,10 @@ export const IndexPageTemplate = ({
       <>
         <Divider />
         <section id="testimonials">
-          <StyledHeading>Our partners</StyledHeading>
-          <Testimonials testimonials={testimonials} />
+          <Container>
+            <StyledHeading>Our partners</StyledHeading>
+            <Testimonials testimonials={testimonials} />
+          </Container>
         </section>
       </>
     }
