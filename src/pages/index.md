@@ -119,6 +119,10 @@ about:
 
 
     The Fellowship aims to cultivate leaders dedicated to improving the long-term future through macro-strategic work. This type of work targets areas that hold great transformative potential on the timescale of decades yet are being neglected by current mainstream efforts.
+testimonials:
+  - quote: The Tianxia fellowship was the most concentrated dose of big thinking,
+      new ideas, innovative (and effective) organizations, and amazing people
+      that I have encountered in my professional life.
 main:
   heading: Great coffee with no compromises
   description: >
