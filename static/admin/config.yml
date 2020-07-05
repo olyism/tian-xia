@@ -56,18 +56,18 @@ collections:
             fields:
             - {label: Title, name: title, widget: string}
             - {label: Body, name: body, widget: markdown}
-          - label: Partners
-            name: partners
+          - label: Testimonials
+            name: testimonials
             widget: list
             fields:
-            - label: Name
-              name: name
+            - label: Partner name
+              name: partnerName
               widget: string
             - label: Logo
               name: logo
               widget: image
-            - label: Testimonials
-              name: testimonials
+            - label: Quotes
+              name: quotes
               widget: list
               fields:
               - label: Quote
@@ -76,8 +76,12 @@ collections:
               - label: Author
                 name: author
                 widget: string
-          - label: Testimonials
-            name: testimonials
+              - label: Is previously employed?
+                name: isPreviouslyEmployed
+                widget: boolean
+                default: false
+          - label: Fellows
+            name: fellows
             widget: list
             fields:
             - {label: Quote, name: quote, widget: string }

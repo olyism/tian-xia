@@ -21,14 +21,14 @@ import Blockquote from '../Blockquote';
 
 const LogoImg = ({ alt, className, src, }) => <img alt={alt} className={className} src={src} />;
 
-const StyledTestimonials = styled.div`
-  margin: 0 auto;
-  max-width: 620px;
+const StyledContainer = styled.div`
+  margin-bottom: ${SPACING['13']};
 `;
 
 const StyledBlockquoteOL = styled.ol`
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 620px;
   padding: 0;
 `;
 
@@ -41,18 +41,48 @@ const StyledLogoOL = styled.ol`
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: 0 -${GUTTER_WIDTH};
+  margin: 0 auto;
   padding: 0;
+
+  @media (min-width: 620px) {
+    max-width: 620px;
+  }
 
   @media (min-width: ${BREAKPOINTS.SM}) {
     flex-direction: row;
+    justify-content: center;
   }
 `;
 
-const StyledLogoLI = styled.li`
+const LogoLI = ({partnerName, logo, active, i, className}) => (
+  <li key={`testimonial-logo-${i}`} i={i} className={className}>
+    <StyledLogoButton active={active}>
+      <StyledLogoButtonImg alt={partnerName} src={logo} />
+      <StyledLogoButtonLink>View testimonial</StyledLogoButtonLink>
+    </StyledLogoButton>
+  </li>
+);
+
+const StyledLogoLI = styled(LogoLI)`
   flex: 1;
   margin: 0 0 ${LINE_HEIGHT.BASE};
   padding: 0 ${GUTTER_WIDTH};
+
+  @media (min-width: ${BREAKPOINTS.SM}) {
+    max-width: 183px;
+  }
+
+  ${({ i }) => {
+    if ((i + 1) % 6 === 0) {
+      return `
+        &::after {
+          content: " ";
+          flex-basis: 100%;
+          height: 0;
+        }
+      `;
+    }
+  }}
 `;
 
 const StyledLogoButton = styled.button`
@@ -65,6 +95,10 @@ const StyledLogoButton = styled.button`
   transition: box-shadow .25s;
   padding: ${SPACING['5']};
   width: 100%;
+
+  @media (min-width: ${BREAKPOINTS.SM}) {
+    height: 144px;
+  }
 
   &:hover {
     box-shadow: ${SHADOW.BUTTON};
@@ -92,69 +126,51 @@ const StyledLogoButtonLink = styled.span`
   text-align: center;
 `;
 
+const smallPrint = {
+  label: '1',
+  content: 'This referee was formerly employed at this role.'
+};
+
 const Testimonials = ({ testimonials }) => {
   if (testimonials) {
     return (
-      <StyledTestimonials>
-        <div>
-          <StyledBlockquoteOL>
-            {testimonials.map((testimonial, i) => {
-              const { 
-                quote, 
-                author,
-                hasSmallPrint,
-              } = testimonial.blockquote;
-              const smallPrint = hasSmallPrint 
-                ? {
-                  label: '1',
-                  content: 'This referee was formerly employed at this role.',
-                }
-                : {};
+      <StyledContainer>
+        <StyledBlockquoteOL>
+          {testimonials.map((testimonial, i) => {
+            const smallPrint = testimonial.isPreviouslyEmployed ? smallPrint : {};
 
-              return ( 
-                <StyledBlockquoteLI key={`testimonial-quote-${i}`} style={testimonial.active && { display: 'block'}}>
-                  <Blockquote quote={quote} author={author} smallPrint={smallPrint} />
-                </StyledBlockquoteLI>
-              );
-            })}
-          </StyledBlockquoteOL>
-        </div>
-        <div>
-          <StyledLogoOL>
-            {testimonials.map((testimonial, i) => {
-              const { 
-                alt,
-                src
-              } = testimonial.logo;
-
-              return (
-                <StyledLogoLI key={`testimonial-logo-${i}`} style={testimonial.active && { display: 'block'}}>
-                  <StyledLogoButton active={testimonial.active}>
-                    <StyledLogoButtonImg alt={alt} src={src} />
-                    <StyledLogoButtonLink>View testimonial</StyledLogoButtonLink>
-                  </StyledLogoButton>
-                </StyledLogoLI>
-              );
-            })}
-          </StyledLogoOL>
-        </div>
-      </StyledTestimonials>
+            return (
+              <StyledBlockquoteLI key={`testimonial-quote-${i}`} style={testimonial.active && { display: 'block'}}>
+                <Blockquote quote={testimonial.quotes[0].quote} author={testimonial.quotes[0].author} smallPrint={smallPrint} />
+              </StyledBlockquoteLI>
+            );
+          })}
+        </StyledBlockquoteOL>
+        <StyledLogoOL>
+          {testimonials.map((testimonial, i) => (
+            <StyledLogoLI key={`testimonial-logo-${i}`} i={i} partnerName={testimonial.partnerName} logo={testimonial.logo} active={testimonial.active}>
+              <StyledLogoButton active={testimonial.active}>
+                <StyledLogoButtonImg alt={testimonial.partnerName} src={testimonial.logo} />
+                <StyledLogoButtonLink>View testimonial</StyledLogoButtonLink>
+              </StyledLogoButton>
+            </StyledLogoLI>
+          ))}
+        </StyledLogoOL>
+      </StyledContainer>
     );
   }
 };
 
 Testimonials.propTypes = {
   testimonials: arrayOf(shape({
-    blockquote: shape({
+    quotes: arrayOf(shape({
       quote: string.isRequired,
-      author: string,
-      hasSmallPrint: bool,
-    }),
-    logo: arrayOf({
-      src: string.isRequired,
-      alt: string.isRequired,
-    }),
-    active: bool,
+      author: string.isRequired,
+      isPreviouslyEmployed: bool.isRequired,
+    })),
+    logo: string.isRequired,
+    partnerName: string.isRequired,
+    active: bool.isRequired,
   })),
 };
 

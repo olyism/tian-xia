@@ -21,4 +21,23 @@ whatWeOffer:
     - Fluent in English and at least conversational in Mandarin Chinese
     
     The program scales up participants’ capabilities for improving the world and provides a lifelong network for mentorship and collaborations.
+testimonials:
+  - partnerName: Founders Pledge
+    logo: /static/logo-founders-pledge.svg
+    quotes:
+    - quote: The fellows are a highly intelligent, sociable and engaged group at the start of their careers, and are mainly focused on long-term issues. I think engaging with us helped them get a sense of how people are thinking about some of the key problem areas; the fellowship has also yielded some concrete benefits for Founders Pledge, as one of the fellows has put us in touch with a high profile entrepreneur working on improving science.
+      author: John Halstead, Head of Applied Research, Founders Pledge
+      isPreviouslyEmployed: false
+  - partnerName: Founders Pledge
+    logo: /static/logo-founders-pledge.svg
+    quotes:
+    - quote: The fellows are a highly intelligent, sociable and engaged group at the start of their careers, and are mainly focused on long-term issues. I think engaging with us helped them get a sense of how people are thinking about some of the key problem areas; the fellowship has also yielded some concrete benefits for Founders Pledge, as one of the fellows has put us in touch with a high profile entrepreneur working on improving science.
+      author: John Halstead, Head of Applied Research, Founders Pledge
+      isPreviouslyEmployed: false
+  - partnerName: Founders Pledge
+    logo: /static/logo-founders-pledge.svg
+    quotes:
+    - quote: The fellows are a highly intelligent, sociable and engaged group at the start of their careers, and are mainly focused on long-term issues. I think engaging with us helped them get a sense of how people are thinking about some of the key problem areas; the fellowship has also yielded some concrete benefits for Founders Pledge, as one of the fellows has put us in touch with a high profile entrepreneur working on improving science.
+      author: John Halstead, Head of Applied Research, Founders Pledge
+      isPreviouslyEmployed: false
 ---
