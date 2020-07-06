@@ -27,6 +27,7 @@ module.exports = {
         name: 'images',
       },
     },
+    'gatsby-plugin-netlify-identity-widget',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
