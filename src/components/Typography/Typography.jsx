@@ -10,9 +10,18 @@ const {
   H6
 } = HEADING;
 
-const Typography = styled.div`
+const p = `
   color: ${PARAGRAPH.COLOR};
-  font-family: ${FONT_STACK.SERIF};
+  font-family: ${PARAGRAPH.FONT_FAMILY};
+  font-size: ${PARAGRAPH.FONT_SIZE};
+  font-weight: ${PARAGRAPH.FONT_WEIGHT};
+  line-height: ${PARAGRAPH.LINE_HEIGHT};
+  margin-bottom: ${PARAGRAPH.MARGIN_BOTTOM};
+  margin-top: ${PARAGRAPH.MARGIN_TOP};
+`;
+
+const Typography = styled.div`
+  ${p}
 
   h1 {
     color: ${H1.COLOR};
@@ -75,13 +84,7 @@ const Typography = styled.div`
   }
 
   p {
-    color: ${PARAGRAPH.COLOR};
-    font-family: ${PARAGRAPH.FONT_FAMILY};
-    font-size: ${PARAGRAPH.FONT_SIZE};
-    font-weight: ${PARAGRAPH.FONT_WEIGHT};
-    line-height: ${PARAGRAPH.LINE_HEIGHT};
-    margin-bottom: ${PARAGRAPH.MARGIN_BOTTOM};
-    margin-top: ${PARAGRAPH.MARGIN_TOP};
+    ${p}
   }
 
   small {

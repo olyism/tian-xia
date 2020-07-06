@@ -5,8 +5,6 @@ import {
   BORDER_RADIUS, 
   CONTEXTUAL_COLOR,
   FONT_STACK, 
-  FONT_SIZE,
-  LINE_HEIGHT,
   SPACING 
 } from '../../constants/theme.js';
 

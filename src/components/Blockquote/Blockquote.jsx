@@ -39,7 +39,7 @@ const Blockquote = ({ quote, author, smallPrint }) => (
     {author && 
       <footer>
         <StyledAuthor>{author}</StyledAuthor>
-        {smallPrint && <SmallPrint smallPrint={smallPrint} />}
+        {smallPrint.label && smallPrint.content && <SmallPrint smallPrint={smallPrint} />}
       </footer>
     }
   </StyledBlockquote>

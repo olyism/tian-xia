@@ -13,11 +13,11 @@ import {
   SPACING,
   Z_INDEX
 } from '../../constants/theme.js';
-import img from '../../img/ken-lawrence-tDPMSTDPdUM-unsplash.jpg';
+import defaultImg from '../../img/ken-lawrence-tDPMSTDPdUM-unsplash.jpg';
 
 const StyledBackground = styled.div`
   align-items: flex-end;
-  background: ${COLOR.ABBEY} url('${img}') 50% 50% no-repeat;
+  background: ${COLOR.ABBEY} url('${({ backgroundImage }) => (backgroundImage || defaultImg)}') 50% 50% no-repeat;
   background-size: cover;
   box-sizing: border-box;
   display: flex;
@@ -84,11 +84,13 @@ const Hero = ({ heading, subheading }) => (
 Hero.propTypes = {
   heading: string,
   subheading: string,
+  backgroundImage: string,
 };
 
 Hero.defaultProps = {
   heading: '',
   subheading: '',
+  backgroundImage: '',
 };
 
 export default Hero;
