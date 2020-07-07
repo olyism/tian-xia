@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: olyism/tian-xia
   branch: master
   commit_messages:
@@ -14,10 +14,10 @@ public_folder: /img
 
 collections:
   - name: "blog"
-    label: "Blog"
+    label: "Pages"
     folder: "src/pages/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
@@ -29,7 +29,7 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "templatePages"
-    label: "Tempalte pages"
+    label: "Template pages"
     files:
       - file: "src/pages/index.md"
         label: "Homepage"
