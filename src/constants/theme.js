@@ -237,6 +237,8 @@ const Z_INDEX = {
   FLOATING: 10,
   HOVERING: 20,
   STICKY: 100,
+  MODAL: 210,
+  OVERLAY: 200,
 };
 
 export {

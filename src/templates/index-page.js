@@ -7,13 +7,10 @@ import Container from '../components/Container';
 import Divider from '../components/Divider';
 import Hero from '../components/Hero';
 import Heading from '../components/Heading';
-import Paragraph from '../components/Paragraph';
 import Typography from '../components/Typography';
 import Callout from '../components/Callout';
-import Testimonials from '../components/Testimonials';
-import { 
-  FONT_SIZE,
-  FONT_STACK,
+import Logos from '../components/Logos';
+import {
   GUTTER_WIDTH,
   SPACING
 } from '../constants/theme.js';
@@ -65,7 +62,7 @@ export const IndexPageTemplate = ({
         <section id="testimonials">
           <Container>
             <StyledHeading>Our partners</StyledHeading>
-            <Testimonials testimonials={testimonials} />
+            <Logos assets={testimonials} />
           </Container>
         </section>
       </>
