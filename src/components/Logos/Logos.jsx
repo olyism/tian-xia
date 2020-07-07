@@ -25,12 +25,13 @@ const StyledLogos = styled.ol`
 
 const Logos = ({ assets }) => assets && (
   <StyledLogos>
-    {assets.map((asset, index) => (
+    {assets.map((asset, i) => (
       <Logo
         partnerName={asset.partnerName}
+        quotes={asset.quotes}
         logo={asset.logo}
-        key={`logo-${index}`}
-        index={index}
+        key={`logo-${i}`}
+        i={i}
       />
     ))}
   </StyledLogos>
@@ -45,7 +46,6 @@ Logos.propTypes = {
     })),
     logo: string.isRequired,
     partnerName: string.isRequired,
-    index: number.isRequired,
   })),
 };
 

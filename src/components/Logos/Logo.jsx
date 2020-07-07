@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from 'react-modal';
 import {
   arrayOf,
   bool,
@@ -6,7 +7,7 @@ import {
   shape,
   string,
 } from 'prop-types';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import {
   BORDER_RADIUS,
   BREAKPOINTS,
@@ -16,8 +17,11 @@ import {
   GUTTER_WIDTH,
   LINE_HEIGHT,
   SHADOW,
-  SPACING
+  SPACING,
+  Z_INDEX
 } from '../../constants/theme';
+import LogoContent from './LogoContent';
+import ic_close from '../../img/ic_close.svg';
 
 const StyledLI = styled.li`
 flex: 1;
@@ -86,14 +90,74 @@ const StyledLink = styled.span`
   }
 `;
 
-const Logo = ({ quotes, logo, partnerName, index }) => (
-  <StyledLI index={index}>
-    <StyledButton disabled={quotes.length}>
-      <StyledImg alt={partnerName} src={logo} />
-      {quotes && <StyledLink>View testimonial</StyledLink>}
-    </StyledButton>
-  </StyledLI>
-);
+const ModalStyles = createGlobalStyle`
+  .Modal {
+    background: ${COLOR.WHITE};
+    border-radius: ${BORDER_RADIUS.CORNER};
+    bottom: auto;
+    left: 50%;
+    margin-bottom: ${SPACING['8']};
+    margin-top: ${SPACING['8']};
+    max-width: 620px;
+    min-height: 400px;
+    overflow-y: scroll;
+    position: fixed;
+    right: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - ${GUTTER_WIDTH});
+    z-index: ${Z_INDEX.MODAL};
+  }
+
+  .Overlay {
+    background: rgba(0, 0, 0, .75);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: ${Z_INDEX.OVERLAY};
+  }
+`;
+
+const StyledCloseButton = styled.button`
+  align-items: center;
+  background: transparent;
+  border: 0;
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+  margin-bottom: ${SPACING['5']};
+  margin-left: ${SPACING['5']};
+  margin-top: ${SPACING['5']};
+  min-width: 85px;
+  padding: 0 ${SPACING['3']};
+`;
+
+const Logo = ({ quotes, logo, partnerName, i }) => {
+  Modal.setAppElement('#___gatsby');
+  const [ modalIsOpen, setIsOpen ] = useState(false);
+  const openModal = () => { 
+    setIsOpen(true); 
+  };
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <StyledLI i={i}>
+      <StyledButton disabled={quotes.length === 0} onClick={openModal}>
+        <StyledImg alt={partnerName} src={logo} />
+        {quotes.length ? <StyledLink>View testimonial</StyledLink> : null}
+      </StyledButton>
+      <ModalStyles />
+      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} className="Modal" overlayClassName="Overlay">
+        {<StyledCloseButton onClick={closeModal}><img alt="Close icon" src={ic_close} /><span>Close</span></StyledCloseButton>}
+        <LogoContent quotes={quotes} />
+      </Modal>
+    </StyledLI>
+  );
+};
 
 Logo.propTypes = {
   quotes: arrayOf(shape({
@@ -103,7 +167,7 @@ Logo.propTypes = {
   })),
   logo: string.isRequired,
   partnerName: string.isRequired,
-  index: number.isRequired,
+  i: number.isRequired,
 };
 
 Logo.defaultProps = {
