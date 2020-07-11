@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { 
   arrayOf,
   bool,
-  number,
   shape,
   string
 } from 'prop-types';

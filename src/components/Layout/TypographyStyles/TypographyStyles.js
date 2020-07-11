@@ -3,7 +3,6 @@ import {
   CONTEXTUAL_COLOR,
   FONT_SIZE, 
   LINE_HEIGHT, 
-  FONT_FAMILY, 
   FONT_STACK 
 } from '../../../constants/theme.js';
 import LatoRegularWoff2 from './lato-v16-latin-regular.woff2';

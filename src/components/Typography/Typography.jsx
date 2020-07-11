@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FONT_STACK, FONT_SIZE, HEADING, PARAGRAPH } from '../../constants/theme.js';
+import { FONT_SIZE, HEADING, PARAGRAPH } from '../../constants/theme.js';
 
 const {
   H1,

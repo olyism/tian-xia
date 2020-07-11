@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, node, oneOf, oneOfType } from 'prop-types';
 import { BREAKPOINTS, GUTTER_WIDTH, COLUMN_WIDTH } from '../../constants/theme.js';

@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { arrayOf, node, oneOf, oneOfType, string } from 'prop-types';
-import { BREAKPOINTS, CONTEXTUAL_COLOR, FONT_SIZE, FONT_STACK, HEADING } from '../../constants/theme.js';
+import {
+  BREAKPOINTS,
+  HEADING
+} from '../../constants/theme.js';
 
 const { H1, H2, H3, H4, H5, H6 } = HEADING;
 
