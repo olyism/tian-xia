@@ -95,15 +95,13 @@ const ModalStyles = createGlobalStyle`
     background: ${COLOR.WHITE};
     border-radius: ${BORDER_RADIUS.CORNER};
     bottom: auto;
+    height: calc(100% - ${SPACING['8']});
     left: 50%;
-    margin-bottom: ${SPACING['8']};
-    margin-top: ${SPACING['8']};
     max-width: 620px;
-    min-height: 400px;
     overflow-y: scroll;
     position: fixed;
     right: auto;
-    top: 50%;
+    top: calc(50%);
     transform: translate(-50%, -50%);
     width: calc(100% - ${GUTTER_WIDTH});
     z-index: ${Z_INDEX.MODAL};
