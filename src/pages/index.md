@@ -21,23 +21,25 @@ whatWeOffer:
     - Fluent in English and at least conversational in Mandarin Chinese
     
     The program scales up participants’ capabilities for improving the world and provides a lifelong network for mentorship and collaborations.
-testimonials:
-  - partnerName: Founders Pledge
-    logo: /static/logo-founders-pledge.svg
-    quotes:
-    - quote: The fellows are a highly intelligent, sociable and engaged group at the start of their careers, and are mainly focused on long-term issues. I think engaging with us helped them get a sense of how people are thinking about some of the key problem areas; the fellowship has also yielded some concrete benefits for Founders Pledge, as one of the fellows has put us in touch with a high profile entrepreneur working on improving science.
-      author: John Halstead, Head of Applied Research, Founders Pledge
-      isPreviouslyEmployed: false
-  - partnerName: Center for the Governance of AI, University of Oxford
-    logo: /static/logo-founders-pledge.svg
-    quotes:
-    - quote: I was impressed by the Tianxia Fellowship programme, and would support its continuation in the coming years. The fellows who were selected were a promising cohort - from a diverse range of backgrounds, but all explicitly value aligned and very committed to steering their future careers for doing the most good. I was particularly struck by their curiosity and eagerness to learn, and certainly got the impression that the Tianxia fellowship was a pivotal experience for several of them in terms of getting their first dose of thorough exposure to the cause areas, organisations, and general concepts involved in long-term thinking.
-      author: Jade Leung, Head of Research and Partnerships, Center for the Governance of AI, University of Oxford
-      isPreviouslyEmployed: false
-  - partnerName: 80,000 Hours
-    logo: /static/logo-founders-pledge.svg
-    quotes:
-    - quote: At 80,000 Hours, we were impressed by the calibre of the Tianxia Fellows and the diversity of their backgrounds. We'd be keen to stay involved in future years.
-      author: Benjamin Todd, CEO and co-founder, 80,000 Hours
-      isPreviouslyEmployed: false
+partners:
+  title: Organizational engagement
+  testimonials:
+    - partnerName: Founders Pledge
+      logo: /static/img/logo-founders-pledge.svg
+      quotes:
+      - quote: The fellows are a highly intelligent, sociable and engaged group at the start of their careers, and are mainly focused on long-term issues. I think engaging with us helped them get a sense of how people are thinking about some of the key problem areas; the fellowship has also yielded some concrete benefits for Founders Pledge, as one of the fellows has put us in touch with a high profile entrepreneur working on improving science.
+        author: John Halstead, Head of Applied Research, Founders Pledge
+        isPreviouslyEmployed: false
+    - partnerName: Center for the Governance of AI, University of Oxford
+      logo: /static/img/logo-oxford.png
+      quotes:
+      - quote: I was impressed by the Tianxia Fellowship programme, and would support its continuation in the coming years. The fellows who were selected were a promising cohort - from a diverse range of backgrounds, but all explicitly value aligned and very committed to steering their future careers for doing the most good. I was particularly struck by their curiosity and eagerness to learn, and certainly got the impression that the Tianxia fellowship was a pivotal experience for several of them in terms of getting their first dose of thorough exposure to the cause areas, organisations, and general concepts involved in long-term thinking.
+        author: Jade Leung, Head of Research and Partnerships, Center for the Governance of AI, University of Oxford
+        isPreviouslyEmployed: false
+    - partnerName: 80,000 Hours
+      logo: /static/img/logo-80000hours.svg
+      quotes:
+      - quote: At 80,000 Hours, we were impressed by the calibre of the Tianxia Fellows and the diversity of their backgrounds. We'd be keen to stay involved in future years.
+        author: Benjamin Todd, CEO and co-founder, 80,000 Hours
+        isPreviouslyEmployed: false
 ---

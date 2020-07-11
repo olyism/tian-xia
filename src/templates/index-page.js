@@ -32,7 +32,7 @@ export const IndexPageTemplate = ({
   hero,
   about,
   whatWeOffer,
-  testimonials
+  partners
 }) => (
   <>
     <section id="home">
@@ -56,13 +56,13 @@ export const IndexPageTemplate = ({
         <Callout />
       </StyledContent>
     </section>
-    {testimonials && 
+    {partners.testimonials && 
       <>
         <Divider />
         <section id="testimonials">
           <Container>
-            <StyledHeading>Our partners</StyledHeading>
-            <Logos assets={testimonials} />
+            {partners.title && <StyledHeading>{partners.title}</StyledHeading>}
+            <Logos assets={partners.testimonials} />
           </Container>
         </section>
       </>
@@ -75,7 +75,7 @@ IndexPageTemplate.propTypes = {
   hero: PropTypes.object,
   about: PropTypes.object,
   whatWeOffer: PropTypes.object,
-  testimonials: PropTypes.array,
+  partners: PropTypes.object,
 }
 
 const IndexPage = ({ data }) => {
@@ -88,7 +88,7 @@ console.log(frontmatter);
         hero={frontmatter.hero}
         about={frontmatter.about}
         whatWeOffer={frontmatter.whatWeOffer}
-        testimonials={frontmatter.testimonials}
+        partners={frontmatter.partners}
       />
     </Layout>
   )
@@ -122,13 +122,16 @@ export const pageQuery = graphql`
           title
           body
         }
-        testimonials {
-          partnerName
-          logo
-          quotes {
-            quote
-            author
-            isPreviouslyEmployed
+        partners {
+          title
+          testimonials {
+            partnerName
+            logo
+            quotes {
+              quote
+              author
+              isPreviouslyEmployed
+            }
           }
         }
       }
