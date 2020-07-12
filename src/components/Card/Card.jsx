@@ -11,7 +11,7 @@ import {
 const StyledCard = styled.article`
   background: rgba(255, 255, 255, .8);
   border-radius: ${BORDER_RADIUS.CORNER};
-  box-sizng: border-box;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   margin-right: 20px;
@@ -39,8 +39,8 @@ const StyledAuthor = styled.p`
   width: 100%;
 `;
 
-const Card = ({ quote, author }) => (
-  <StyledCard>
+const Card = ({ quote, author, className }) => (
+  <StyledCard className={className}>
     <StyledQuote>"{quote}"</StyledQuote>
     {author && <StyledAuthor>{author}</StyledAuthor>}
   </StyledCard>
@@ -49,10 +49,12 @@ const Card = ({ quote, author }) => (
 Card.propTypes = {
   quote: string.isRequired,
   author: string,
+  className: string,
 };
 
 Card.defaultProps = {
   author: '',
+  className: '',
 };
 
 export default Card;

@@ -76,19 +76,21 @@ IndexPageTemplate.propTypes = {
   about: PropTypes.object,
   whatWeOffer: PropTypes.object,
   partners: PropTypes.object,
+  fellows: PropTypes.object,
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 console.log(frontmatter);
   return (
-    <Layout>
+    <Layout data={{fellows: frontmatter.fellows}}>
       <IndexPageTemplate
         title={frontmatter.title}
         hero={frontmatter.hero}
         about={frontmatter.about}
         whatWeOffer={frontmatter.whatWeOffer}
         partners={frontmatter.partners}
+        fellows={frontmatter.fellows}
       />
     </Layout>
   )
@@ -135,6 +137,13 @@ export const pageQuery = graphql`
               author
               isPreviouslyEmployed
             }
+          }
+        }
+        fellows {
+          title
+          testimonials {
+            quote
+            author
           }
         }
       }

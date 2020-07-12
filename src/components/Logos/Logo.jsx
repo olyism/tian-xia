@@ -17,8 +17,7 @@ import {
   GUTTER_WIDTH,
   LINE_HEIGHT,
   SHADOW,
-  SPACING,
-  Z_INDEX
+  SPACING
 } from '../../constants/theme';
 import LogoContent from './LogoContent';
 import ic_close from '../../img/ic_close.svg';
