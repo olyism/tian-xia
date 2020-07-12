@@ -65,12 +65,8 @@ collections:
               name: testimonials
               widget: list
               fields:
-              - label: Partner name
-                name: partnerName
-                widget: string
-              - label: Logo
-                name: logo
-                widget: image
+              - {label: Partner name, name: partnerName, widget: string}
+              - {label: Logo, name: logo, widget: image}
               - label: Quotes
                 name: quotes
                 widget: list
@@ -87,7 +83,14 @@ collections:
                   default: false
           - label: Fellows
             name: fellows
-            widget: list
+            widget: object
             fields:
-            - {label: Quote, name: quote, widget: string }
-            - {label: Author, name: author, widget: string, required: false }
+            - label: Title
+              name: title
+              widget: string
+            - label: Fellows testimonials
+              name: testimonials
+              widget: list
+              fields:
+              - {label: Quote, name: quote, widget: string}
+              - {label: Author, name: author, widget: string, required: false}

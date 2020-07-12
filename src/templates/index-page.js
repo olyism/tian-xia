@@ -126,7 +126,10 @@ export const pageQuery = graphql`
           title
           testimonials {
             partnerName
-            logo
+            logo {
+              extension
+              publicURL
+            }
             quotes {
               quote
               author
