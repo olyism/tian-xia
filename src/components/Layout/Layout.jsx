@@ -1,4 +1,9 @@
 import React from 'react';
+import {
+  arrayOf,
+  shape,
+  string
+} from 'prop-types';
 import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { withPrefix } from 'gatsby';
@@ -25,7 +30,7 @@ const ResetStyles = createGlobalStyle`
   }
 `;
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ data, children }) => {
   const { title, description } = useSiteMetadata()
   return (
     <>
@@ -71,9 +76,21 @@ const TemplateWrapper = ({ children }) => {
       <TypographyStyles />
       <Navbar />
       <main>{children}</main>
-      <Footer />
+      <Footer {...data} />
     </>
   )
 }
+
+TemplateWrapper.propTypes = {
+  data: shape({
+    fellows: shape({
+      title: string,
+      testimonials: arrayOf(shape({
+        quote: string,
+        author: string,
+      })),
+    }),
+  }),
+};
 
 export default TemplateWrapper

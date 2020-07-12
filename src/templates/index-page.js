@@ -32,7 +32,7 @@ export const IndexPageTemplate = ({
   hero,
   about,
   whatWeOffer,
-  testimonials
+  partners
 }) => (
   <>
     <section id="home">
@@ -56,13 +56,13 @@ export const IndexPageTemplate = ({
         <Callout />
       </StyledContent>
     </section>
-    {testimonials && 
+    {partners.testimonials && 
       <>
         <Divider />
         <section id="testimonials">
           <Container>
-            <StyledHeading>Our partners</StyledHeading>
-            <Logos assets={testimonials} />
+            {partners.title && <StyledHeading>{partners.title}</StyledHeading>}
+            <Logos assets={partners.testimonials} />
           </Container>
         </section>
       </>
@@ -75,20 +75,22 @@ IndexPageTemplate.propTypes = {
   hero: PropTypes.object,
   about: PropTypes.object,
   whatWeOffer: PropTypes.object,
-  testimonials: PropTypes.array,
+  partners: PropTypes.object,
+  fellows: PropTypes.object,
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 console.log(frontmatter);
   return (
-    <Layout>
+    <Layout data={{fellows: frontmatter.fellows}}>
       <IndexPageTemplate
         title={frontmatter.title}
         hero={frontmatter.hero}
         about={frontmatter.about}
         whatWeOffer={frontmatter.whatWeOffer}
-        testimonials={frontmatter.testimonials}
+        partners={frontmatter.partners}
+        fellows={frontmatter.fellows}
       />
     </Layout>
   )
@@ -122,13 +124,26 @@ export const pageQuery = graphql`
           title
           body
         }
-        testimonials {
-          partnerName
-          logo
-          quotes {
+        partners {
+          title
+          testimonials {
+            partnerName
+            logo {
+              extension
+              publicURL
+            }
+            quotes {
+              quote
+              author
+              isPreviouslyEmployed
+            }
+          }
+        }
+        fellows {
+          title
+          testimonials {
             quote
             author
-            isPreviouslyEmployed
           }
         }
       }

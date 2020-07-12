@@ -26,7 +26,6 @@ const StyledLI = styled.li`
 
   &:last-child {
     border-bottom: 0;
-    padding-bottom: 0;
   }
 `;
 

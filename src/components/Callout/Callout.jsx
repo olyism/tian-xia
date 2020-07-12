@@ -4,7 +4,11 @@ import { string } from 'prop-types';
 import Heading from '../Heading';
 import Paragraph from '../Paragraph';
 import Button from '../Button';
-import { BORDER_RADIUS, COLOR, CONTEXTUAL_COLOR, SPACING } from '../../constants/theme.js';
+import {
+  BORDER_RADIUS,
+  COLOR,
+  SPACING
+} from '../../constants/theme.js';
 
 const StyledCallout = styled.aside`
   background: ${COLOR.CLARET};

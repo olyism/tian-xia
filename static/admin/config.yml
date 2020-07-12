@@ -24,7 +24,6 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
@@ -56,33 +55,41 @@ collections:
             fields:
             - {label: Title, name: title, widget: string}
             - {label: Body, name: body, widget: markdown}
-          - label: Testimonials
-            name: testimonials
-            widget: list
+          - label: Partners
+            name: partners
+            widget: object
             fields:
-            - label: Partner name
-              name: partnerName
-              widget: string
-            - label: Logo
-              name: logo
-              widget: image
-            - label: Quotes
-              name: quotes
+            - {label: Title, name: title, widget: string}
+            - label: Partner testimonials
+              name: testimonials
               widget: list
               fields:
-              - label: Quote
-                name: quote
-                widget: string
-              - label: Author
-                name: author
-                widget: string
-              - label: Is previously employed?
-                name: isPreviouslyEmployed
-                widget: boolean
-                default: false
+              - {label: Partner name, name: partnerName, widget: string}
+              - {label: Logo, name: logo, widget: image}
+              - label: Quotes
+                name: quotes
+                widget: list
+                fields:
+                - label: Quote
+                  name: quote
+                  widget: string
+                - label: Author
+                  name: author
+                  widget: string
+                - label: Is previously employed?
+                  name: isPreviouslyEmployed
+                  widget: boolean
+                  default: false
           - label: Fellows
             name: fellows
-            widget: list
+            widget: object
             fields:
-            - {label: Quote, name: quote, widget: string }
-            - {label: Author, name: author, widget: string, required: false }
+            - label: Title
+              name: title
+              widget: string
+            - label: Fellows testimonials
+              name: testimonials
+              widget: list
+              fields:
+              - {label: Quote, name: quote, widget: string}
+              - {label: Author, name: author, widget: string, required: false}
