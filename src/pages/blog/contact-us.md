@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Contact us
 date: 2020-07-07T01:56:41.326Z
-description: t
+description: test
 featuredpost: true
 featuredimage: /img/chemex.jpg
 tags:
