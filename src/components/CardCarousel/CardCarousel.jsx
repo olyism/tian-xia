@@ -396,8 +396,8 @@ const CardCarousel = ({ data }) => {
       <Slider {...settings}>
         {data.map((datum, i) => {
           const quote = datum.quote.length > charMaxLen ?
-            `${datum.quote.substring(0, charMaxLen)}…` :
-            datum.quote;
+            `"${datum.quote.substring(0, charMaxLen)}…"` :
+            `"${datum.quote}"`;
           return <StyledCard quote={quote} author={datum.author} key={`fellow-testimonial-${i}`} />;
         })}
       </Slider>
