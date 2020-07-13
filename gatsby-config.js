@@ -66,6 +66,14 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-matomo',
+      options: {
+        siteId: '2',
+        matomoUrl: '//analytics.olyism.design/',
+        siteUrl: 'https://www.tian-xia.com'
+      }
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
