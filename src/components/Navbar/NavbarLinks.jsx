@@ -61,7 +61,7 @@ const NavbarLinks = () => (
         <StyledLink href="/#what-we-offer">What we offer</StyledLink>
         <StyledLink href="/#testimonials">Testimonials</StyledLink>
       </StyledScrollspy>
-      <StyledButton btnStyle="primary" href="mailto:info@tian-xia.com">Enquire</StyledButton>
+      <StyledButton btnStyle="primary" to="mailto:info@tian-xia.com">Enquire</StyledButton>
     </StyledNav>
   </>
 );
