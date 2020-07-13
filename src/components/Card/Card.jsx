@@ -41,7 +41,7 @@ const StyledAuthor = styled.p`
 
 const Card = ({ quote, author, className }) => (
   <StyledCard className={className}>
-    <StyledQuote>"{quote}"</StyledQuote>
+    <StyledQuote>{quote}</StyledQuote>
     {author && <StyledAuthor>{author}</StyledAuthor>}
   </StyledCard>
 );

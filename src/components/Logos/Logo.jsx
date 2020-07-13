@@ -79,14 +79,10 @@ const StyledImg = styled.img`
 const StyledLink = styled.span`
   border-bottom: 1px solid ${CONTEXTUAL_COLOR.INFO.TONE40};
   color: ${CONTEXTUAL_COLOR.LINK.LINK};
-  display: none;
+  display: inline-block;
   font-size: ${FONT_SIZE.SUBTEXT};
   margin: auto auto 0;
   text-align: center;
-
-  @media (min-width: ${BREAKPOINTS.SM}) {
-    display: inline-block;
-  }
 `;
 
 const StyledCloseButton = styled.button`

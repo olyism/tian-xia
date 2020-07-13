@@ -71,8 +71,8 @@ const StyledSubheading = styled.p`
   text-shadow: ${SHADOW.TEXT};
 `;
 
-const Hero = ({ heading, subheading }) => (
-  <StyledBackground>
+const Hero = ({ heading, subheading, backgroundImage }) => (
+  <StyledBackground backgroundImage={backgroundImage}>
     <StyledHeadingGroup>
       {heading && <StyledHeading level="1">{heading}</StyledHeading>}
       {subheading && <StyledSubheading>{subheading}</StyledSubheading>}

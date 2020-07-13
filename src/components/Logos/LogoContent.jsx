@@ -6,8 +6,10 @@ import {
   shape,
   string
 } from 'prop-types';
-import { COLOR, SPACING } from '../../constants/theme';
-import Paragraph from '../Paragraph';
+import { 
+  COLOR, 
+  SPACING
+} from '../../constants/theme';
 
 const StyledArticle = styled.article`
   padding: 0 ${SPACING['8']};
@@ -33,6 +35,11 @@ const StyledBlockquote = styled.blockquote`
   margin: 0;
 `;
 
+const StyledParagraph = styled.p`
+  font-size: 16px;
+  line-height: 24px;
+`;
+
 const StyledAuthor = styled.span`
   font-size: 16px;
   font-weight: bold;
@@ -47,7 +54,7 @@ const LogoContent = ({ quotes }) => (
         return (
           <StyledLI key={`quote-${i}`}>
             <StyledBlockquote>
-              <Paragraph>{quote}</Paragraph>
+              <StyledParagraph>"{quote}"</StyledParagraph>
               {author && (
                 <footer>
                   <StyledAuthor>{author}</StyledAuthor>
