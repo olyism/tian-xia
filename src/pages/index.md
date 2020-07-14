@@ -5,7 +5,7 @@ hero:
   heading: Tianxia Academy Fellowship
   subheading: Empowering the future leaders and thinkers to contribute towards an
     equitable and harmonious future.
-  image: /img/chuttersnap-aku7zlj_x_o-unsplash.jpg
+  image: /img/dennis-kummer-52geprmkp7m-unsplash.jpg
 about:
   title: About us
   body: >-
