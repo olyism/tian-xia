@@ -12,6 +12,7 @@ import Heading from '../Heading';
 import CardCarousel from '../CardCarousel';
 import img from '../../img/patrick-xu-OMqYNbc0i4A-unsplash.jpg';
 import {
+  BREAKPOINTS,
   COLOR,
   SHADOW,
   SPACING,
@@ -65,6 +66,12 @@ const StyledHeading = styled(Heading)`
   text-shadow: ${SHADOW.TEXT};
 `;
 
+const StyledRightText = styled.div`
+  @media (min-width: ${BREAKPOINTS.SM}) {
+    text-align: right;
+  }
+`;
+
 const Footer = ({ fellows }) => (
   <StyledFooter>
     <StyledFooterContainer>
@@ -75,11 +82,13 @@ const Footer = ({ fellows }) => (
         </StyledCardCarouselContainer>
       }
       <Row>
-        <Col>
+        <Col xs={12} sm={6}>
           Copyright &copy; {new Date().getFullYear()} Tianxia Fellowship. <StyledLink href="/terms">Terms of use</StyledLink>
         </Col>
-        <Col style={{textAlign: 'right'}}>
-          Contact <StyledLink href="mailto:info@tian-xia.com">info@tian-xia.com</StyledLink>
+        <Col xs={12} sm={6}>
+          <StyledRightText>
+            <StyledLink href="mailto:info@tian-xia.com">info@tian-xia.com</StyledLink>
+          </StyledRightText>
         </Col>
       </Row>
     </StyledFooterContainer>
