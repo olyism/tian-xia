@@ -3,7 +3,6 @@ import Modal from 'react-modal';
 import styled, { createGlobalStyle } from 'styled-components';
 import { 
   arrayOf,
-  bool,
   shape,
   string
 } from 'prop-types';
@@ -81,7 +80,7 @@ Logos.propTypes = {
     quotes: arrayOf(shape({
       quote: string.isRequired,
       author: string.isRequired,
-      isPreviouslyEmployed: bool.isRequired,
+      footnote: string,
     })),
     logo: shape({
       extension: string.isRequired,

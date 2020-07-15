@@ -16,7 +16,7 @@ const getColXsStyles = (xs) => {
 const getColSmStyles = (sm) => {
   if (sm) {
     return `
-      @media (min-width: ${BREAKPOINTS[sm]}) {
+      @media (min-width: ${BREAKPOINTS.SM}) {
         flex-basis: ${COLUMN_WIDTH[sm]};
         max-width: ${COLUMN_WIDTH[sm]};
       }
@@ -29,7 +29,7 @@ const getColSmStyles = (sm) => {
 const getColMdStyles = (md) => {
   if (md) {
     return `
-      @media (min-width: ${BREAKPOINTS[md]}) {
+      @media (min-width: ${BREAKPOINTS.MD}) {
         flex-basis: ${COLUMN_WIDTH[md]};
         max-width: ${COLUMN_WIDTH[md]};
       }
@@ -42,7 +42,7 @@ const getColMdStyles = (md) => {
 const getColLgStyles = (lg) => {
   if (lg) {
     return `
-      @media (min-width: ${BREAKPOINTS[lg]}) {
+      @media (min-width: ${BREAKPOINTS.LG}) {
         flex-basis: ${COLUMN_WIDTH[lg]};
         max-width: ${COLUMN_WIDTH[lg]};
       }
@@ -52,16 +52,15 @@ const getColLgStyles = (lg) => {
   return '';
 };
 
-const getResponsiveStyles = ({ xs, sm, md, lg}) => {
-  return `
-    ${getColXsStyles(xs)}
-    ${getColSmStyles(sm)}
-    ${getColMdStyles(md)}
-    ${getColLgStyles(lg)}
-  `;
-};
+const getResponsiveStyles = ({ xs, sm, md, lg}) => `
+  ${getColXsStyles(xs)}
+  ${getColSmStyles(sm)}
+  ${getColMdStyles(md)}
+  ${getColLgStyles(lg)}
+`;
 
 const Col = styled.div`
+  box-sizing: border-box;
   flex: 1;
   padding-left: ${GUTTER_WIDTH};
   padding-right: ${GUTTER_WIDTH};
