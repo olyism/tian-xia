@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import ReactMarkdown from 'react-markdown';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Container from '../components/Container';
@@ -45,14 +46,18 @@ export const IndexPageTemplate = ({
     <section id="about-us">
       <StyledContent>
         <Heading>{about.title}</Heading>
-        <Typography dangerouslySetInnerHTML={{ __html: about.body }} />
+        <Typography>
+          <ReactMarkdown source={about.body} />
+        </Typography>
       </StyledContent>
     </section>
     <Divider />
     <section id="what-we-offer">
       <StyledContent>
         <Heading>{whatWeOffer.title}</Heading>
-        <Typography dangerouslySetInnerHTML={{ __html: whatWeOffer.body }} />
+        <Typography>
+          <ReactMarkdown source={whatWeOffer.body} />
+        </Typography>
         <Callout />
       </StyledContent>
     </section>
@@ -81,7 +86,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-console.log(frontmatter);
+console.log(data);
   return (
     <Layout data={{fellows: frontmatter.fellows}}>
       <IndexPageTemplate
