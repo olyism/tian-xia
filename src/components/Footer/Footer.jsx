@@ -62,7 +62,6 @@ const StyledCardCarouselContainer = styled.div`
 
 const StyledHeading = styled(Heading)`
   color: ${COLOR.WHITE};
-  font-weight: normal;
   text-shadow: ${SHADOW.TEXT};
 `;
 
