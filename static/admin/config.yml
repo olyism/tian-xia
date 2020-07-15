@@ -73,10 +73,10 @@ collections:
                 - label: Author
                   name: author
                   widget: string
-                - label: Is previously employed?
-                  name: isPreviouslyEmployed
-                  widget: boolean
-                  default: false
+                - label: Footnote
+                  name: footnote
+                  widget: string
+                  required: false
           - label: Fellows
             name: fellows
             widget: object

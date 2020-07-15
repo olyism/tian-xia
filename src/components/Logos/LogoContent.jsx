@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import {
   arrayOf,
-  bool,
   shape,
   string
 } from 'prop-types';
 import { 
   COLOR, 
+  CONTEXTUAL_COLOR,
+  FONT_SIZE,
+  LINE_HEIGHT,
   SPACING
 } from '../../constants/theme';
 
@@ -40,27 +42,35 @@ const StyledParagraph = styled.p`
   line-height: 24px;
 `;
 
-const StyledAuthor = styled.span`
+const StyledAuthor = styled.p`
   font-size: 16px;
   font-weight: bold;
   line-height: 24px;
+  margin-bottom: 0;
+`;
+
+const StyledFootnote = styled.p`
+  color: ${CONTEXTUAL_COLOR.SUBTEXT};
+  font-size: ${FONT_SIZE.SUBTEXT};
+  line-height: ${LINE_HEIGHT.SUBTEXT};
+  margin-bottom: 0;
 `;
 
 const LogoContent = ({ quotes }) => (
   <StyledArticle>
     <StyledUL>
       {quotes.map((data, i) => {
-        const { quote, author, isPreviouslyEmployed } = data;
+        const { quote, author, footnote } = data;
         return (
           <StyledLI key={`quote-${i}`}>
             <StyledBlockquote>
               <StyledParagraph>"{quote}"</StyledParagraph>
               {author && (
                 <footer>
-                  <StyledAuthor>{author}</StyledAuthor>
-                  {isPreviouslyEmployed && (
-                    <sup title={`${author} was formerly employed in this position`}>1</sup>
-                  )}
+                  <StyledAuthor>
+                    {author}
+                  </StyledAuthor>
+                  {footnote && <StyledFootnote>{footnote}</StyledFootnote>}
                 </footer>
               )}
             </StyledBlockquote>
@@ -75,8 +85,8 @@ LogoContent.propTypes = {
   quotes: arrayOf(shape({
     quote: string.isRequired,
     author: string.isRequired,
-    isPreviouslyEmployed: bool.isRequired,
-  })),
+    footnote: string,
+  })).isRequired,
 };
 
 export default LogoContent;

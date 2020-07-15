@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import {
   arrayOf,
-  bool,
   number,
   shape,
   string,
@@ -115,8 +114,8 @@ const Logo = ({ quotes, logo, partnerName, i }) => {
         {quotes.length ? <StyledLink>View testimonial</StyledLink> : null}
       </StyledButton>
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} className="Modal" overlayClassName="Overlay">
-        {<StyledCloseButton onClick={closeModal}><img alt="Close icon" src={ic_close} /><span>Close</span></StyledCloseButton>}
-        <LogoContent quotes={quotes} />
+        <StyledCloseButton onClick={closeModal}><img alt="Close icon" src={ic_close} /><span>Close</span></StyledCloseButton>
+        {quotes && <LogoContent quotes={quotes} />}
       </Modal>
     </StyledLI>
   );
@@ -126,7 +125,7 @@ Logo.propTypes = {
   quotes: arrayOf(shape({
     quote: string.isRequired,
     author: string.isRequired,
-    isPreviouslyEmployed: bool.isRequired,
+    footnote: string,
   })),
   logo: shape({
     extension: string.isRequired,
