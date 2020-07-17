@@ -3,8 +3,7 @@ templateKey: index-page
 title: Tianxia Academy Fellowship
 hero:
   heading: Tianxia Academy Fellowship
-  subheading: Empowering the future leaders and thinkers to contribute towards an
-    equitable and harmonious future.
+  subheading: Empowering young leaders towards creating an equitable and harmonious future
   image: /img/dennis-kummer-52geprmkp7m-unsplash.jpg
 about:
   title: About us
@@ -75,7 +74,7 @@ partners:
     - partnerName: Global Priorities Institute, University of Oxford
       logo: /img/download.png
 fellows:
-  title: Testimonials from fellows
+  title: Testimonials from our fellows
   testimonials:
     - quote: The Tianxia fellowship was the most concentrated dose of big thinking,
         new ideas, innovative (and effective) organizations, and amazing people
