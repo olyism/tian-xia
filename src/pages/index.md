@@ -5,7 +5,7 @@ hero:
   heading: Tianxia Academy Fellowship
   subheading: Empowering the future leaders and thinkers to contribute towards an
     equitable and harmonious future.
-  image: /img/robynne-hu-ivytafsn9hk-unsplash.jpg
+  image: /img/dennis-kummer-52geprmkp7m-unsplash.jpg
 about:
   title: About us
   body: >-
@@ -72,6 +72,8 @@ partners:
             involved in future years.
           author: Benjamin Todd, CEO and co-founder, 80,000 Hours
           isPreviouslyEmployed: false
+    - partnerName: Global Priorities Institute, University of Oxford
+      logo: /img/download.png
 fellows:
   title: Fellows' testimonials
   testimonials:
