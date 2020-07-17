@@ -3,24 +3,27 @@ templateKey: index-page
 title: Tianxia Academy Fellowship
 hero:
   heading: Tianxia Academy Fellowship
-  subheading: Empowering young leaders towards creating an equitable and harmonious future
+  subheading: Empowering people towards creating grand futures
   image: /img/dennis-kummer-52geprmkp7m-unsplash.jpg
 about:
   title: About us
-  body: >-
-    The world faces ever more complex and critical challenges. In an era of
+  body: The world faces ever more complex and critical challenges. In an era of
     global interdependence, peoples, nations, and cultures must come together to
     rise above their common hurdles. “Tianxia (天下) ” is a Chinese term
     expressing the idea of a universal civilizational order under which life on
     Earth may flourish. Inspired by this ancient concept, the Tianxia Academy
-    believes in empowering the future leaders and thinkers to contribute towards
-    an equitable and harmonious future.
-
-
-    The Fellowship aims to cultivate leaders dedicated to improving the long-term future through macro-strategic work. This type of work targets areas that hold great transformative potential on the timescale of decades yet are being neglected by current mainstream efforts.
+    believes in empowering future leaders to contribute towards an equitable and
+    harmonious future.
 whatWeOffer:
   title: What we offer
   body: >-
+    The Fellowship aims to cultivate leaders dedicated to safeguarding the
+    welfare of future generations. During the program, fellows are expected to
+    gain knowledge about China, AI safety, global catastrophic biological risks,
+    and risks from great power conflicts, by visiting relevant organizations and
+    engaging with prominent thinkers in the fields. 
+
+
     We support students and early-career professionals who are:
 
 
