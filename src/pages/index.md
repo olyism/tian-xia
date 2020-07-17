@@ -19,8 +19,8 @@ whatWeOffer:
   body: >-
     The Fellowship aims to cultivate leaders dedicated to safeguarding the
     welfare of future generations. During the program, fellows are expected to
-    gain knowledge about China, AI safety, global catastrophic biological risks,
-    and risks from great power conflicts, by visiting relevant organizations and
+    gain knowledge about AI safety, global catastrophic biological risks, and
+    risks from great power conflicts, by visiting relevant organizations and
     engaging with prominent thinkers in the fields. 
 
 
@@ -51,7 +51,7 @@ partners:
           author: John Halstead, Head of Applied Research, Founders Pledge
           isPreviouslyEmployed: false
     - partnerName: Center for the Governance of AI, University of Oxford
-      logo: /static/img/logo-oxford.png
+      logo: /img/screen-shot-2020-07-17-at-10.54.45-am.png
       quotes:
         - quote: I was impressed by the Tianxia Fellowship programme, and would support
             its continuation in the coming years. The fellows who were selected
@@ -66,6 +66,17 @@ partners:
           author: Jade Leung, Head of Research and Partnerships, Center for the Governance
             of AI, University of Oxford
           isPreviouslyEmployed: false
+          footnote: The individuals and their titles reflect the time when the program
+            engagement took place.
+        - quote: The Tianxia fellows were bright and engaged. They had a wide range of
+            interests and backgrounds which tended towards productive
+            conversation and research discussions. I was impressed by how game
+            the fellows were - they threw themselves into the research
+            activities we did together and contributed their own perspectives
+            and ideas. If Tianxia wanted to visit Oxford again, I'd be keen to
+            organise another workshop with them.
+          author: Rose Hadshar, Project Manager, Research Scholars Programme,  Future of
+            Humanity Institute, University of Oxford
     - partnerName: 80,000 Hours
       logo: /static/img/logo-80000hours.svg
       quotes:
