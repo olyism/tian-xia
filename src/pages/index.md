@@ -38,18 +38,6 @@ whatWeOffer:
 partners:
   title: Organizational engagement
   testimonials:
-    - partnerName: Founders Pledge
-      logo: /static/img/logo-founders-pledge.svg
-      quotes:
-        - quote: The fellows are a highly intelligent, sociable and engaged group at the
-            start of their careers, and are mainly focused on long-term issues.
-            I think engaging with us helped them get a sense of how people are
-            thinking about some of the key problem areas; the fellowship has
-            also yielded some concrete benefits for Founders Pledge, as one of
-            the fellows has put us in touch with a high profile entrepreneur
-            working on improving science.
-          author: John Halstead, Head of Applied Research, Founders Pledge
-          isPreviouslyEmployed: false
     - partnerName: Center for the Governance of AI, University of Oxford
       logo: /img/screen-shot-2020-07-17-at-10.54.45-am.png
       quotes:
@@ -77,14 +65,38 @@ partners:
             organise another workshop with them.
           author: Rose Hadshar, Project Manager, Research Scholars Programme,  Future of
             Humanity Institute, University of Oxford
+    - partnerName: Founders Pledge
+      logo: /static/img/logo-founders-pledge.svg
+      quotes:
+        - quote: The fellows are a highly intelligent, sociable and engaged group at the
+            start of their careers, and are mainly focused on long-term issues.
+            I think engaging with us helped them get a sense of how people are
+            thinking about some of the key problem areas; the fellowship has
+            also yielded some concrete benefits for Founders Pledge, as one of
+            the fellows has put us in touch with a high profile entrepreneur
+            working on improving science.
+          author: John Halstead, Head of Applied Research, Founders Pledge
+          isPreviouslyEmployed: false
     - partnerName: 80,000 Hours
-      logo: /static/img/logo-80000hours.svg
+      logo: /img/og-logo_0.png
       quotes:
         - quote: At 80,000 Hours, we were impressed by the calibre of the Tianxia Fellows
             and the diversity of their backgrounds. We'd be keen to stay
             involved in future years.
           author: Benjamin Todd, CEO and co-founder, 80,000 Hours
           isPreviouslyEmployed: false
+    - partnerName: CHAI
+      quotes:
+        - quote: We organized a workshop with the Fellows in April 2020. We found our
+            workshop with the fellows very valuable, given their strong interest
+            and curiosity in our work, and their potential for high-impact
+            endeavors. We had excellent discussions that may lead to fruitful
+            collaborations on beneficial and safe AI.
+          author: Caroline Jeanmaire, Director of Strategic Research and Partnerships,  UC
+            Berkeley’s Center for Human-Compatible AI
+      logo: /img/download-1-.png
+    - partnerName: Effective Giving UK
+      logo: /img/screen-shot-2020-07-17-at-11.05.15-am.png
     - partnerName: Global Priorities Institute, University of Oxford
       logo: /img/download.png
 fellows:
