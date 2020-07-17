@@ -75,7 +75,7 @@ partners:
     - partnerName: Global Priorities Institute, University of Oxford
       logo: /img/download.png
 fellows:
-  title: Fellows' testimonials
+  title: Testimonials from fellows
   testimonials:
     - quote: The Tianxia fellowship was the most concentrated dose of big thinking,
         new ideas, innovative (and effective) organizations, and amazing people
