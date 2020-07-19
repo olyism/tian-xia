@@ -4,7 +4,6 @@ import { string } from 'prop-types';
 import Heading from '../Heading'
 import { 
   BREAKPOINTS, 
-  BROWSER_CONTEXT,
   COLOR, 
   FONT_SIZE, 
   FONT_STACK, 
