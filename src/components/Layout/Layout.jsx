@@ -10,6 +10,7 @@ import { withPrefix } from 'gatsby';
 import TypographyStyles from './TypographyStyles';
 import Footer from '../Footer';
 import Navbar from '../Navbar';
+import { CONTEXTUAL_COLOR } from '../../constants/theme';
 import useSiteMetadata from '../SiteMetadata';
 
 const ResetStyles = createGlobalStyle`
@@ -27,6 +28,10 @@ const ResetStyles = createGlobalStyle`
 
   img {
     border-style: none;
+  }
+
+  a {
+    color: ${CONTEXTUAL_COLOR.LINK.LINK};
   }
 `;
 

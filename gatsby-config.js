@@ -4,6 +4,18 @@ module.exports = {
     description: 'Tianxia Fellowship',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: `tian-xia-gatsby`,
+        short_name: `tian-xia`,
+        start_url: `/`,
+        background_color: `#ABA187`,
+        theme_color: `#ABA187`,
+        display: `minimal-ui`,
+        icon: `src/img/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support

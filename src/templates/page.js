@@ -1,34 +1,43 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
+import Container from '../components/Container';
+import Heading from '../components/Heading';
+import Layout from '../components/Layout';
+import Spacer from '../components/Spacer';
+import Content, { HTMLContent } from '../components/Content';
+
+const StyledPageHeader = styled.div`
+  padding-top: 120px;
+`;
 
 export const PageTemplate = ({
   content,
   contentComponent,
-  description,
   title,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
+      <section className="section">
+        <StyledPageHeader>
+          <Container>
+            <Heading level={1}>{title}</Heading>
+          </Container>
+        </StyledPageHeader>
+        <Container>
+          <article>
             <PostContent content={content} />
-          </div>
-        </div>
-      </div>
-    </section>
+          </article>
+        </Container>
+      </section>
+      <Spacer spacing="13" />
+    </>
   )
 }
 
@@ -79,7 +88,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        description
       }
     }
   }
