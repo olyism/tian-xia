@@ -4,6 +4,7 @@ import { string } from 'prop-types';
 import Heading from '../Heading'
 import { 
   BREAKPOINTS, 
+  BROWSER_CONTEXT,
   COLOR, 
   FONT_SIZE, 
   FONT_STACK, 
@@ -16,20 +17,20 @@ import {
 import defaultImg from '../../img/ken-lawrence-tDPMSTDPdUM-unsplash.jpg';
 
 const StyledBackground = styled.div`
-  align-items: flex-end;
+  align-items: center;
   background: ${COLOR.ABBEY} url('${({ backgroundImage }) => (backgroundImage || defaultImg)}') 50% 50% no-repeat;
   background-size: cover;
   box-sizing: border-box;
   display: flex;
-  height: 100vh;
-  min-height: 667px;
+  min-height: 450px;
   padding-bottom: ${SPACING['13']};
   padding-left: ${GUTTER_WIDTH};
   padding-right: ${GUTTER_WIDTH};
+  padding-top: 80px;
   position: relative;
 
   @media (min-width: ${BREAKPOINTS.SM}) {
-    align-items: center;
+    min-height: 667px;
     padding-bttom: ${SPACING['0']};
   }
 `;
