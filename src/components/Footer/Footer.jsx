@@ -10,6 +10,7 @@ import Row from '../Row';
 import Col from '../Col';
 import Heading from '../Heading';
 import CardCarousel from '../CardCarousel';
+import Spacer from '../Spacer';
 import img from '../../img/patrick-xu-OMqYNbc0i4A-unsplash.jpg';
 import {
   BREAKPOINTS,
@@ -75,10 +76,16 @@ const Footer = ({ fellows }) => (
   <StyledFooter>
     <StyledFooterContainer>
       {fellows.testimonials && fellows.testimonials.length !== 0 &&
-        <StyledCardCarouselContainer>
-          {fellows.title && <StyledHeading level="2">{fellows.title}</StyledHeading>}
-          <CardCarousel data={fellows.testimonials} />
-        </StyledCardCarouselContainer>
+        <>
+          <StyledCardCarouselContainer>
+            {fellows.title && <>
+              <StyledHeading level="2">{fellows.title}</StyledHeading>
+              <Spacer spacing="8" />
+            </>}
+            <CardCarousel data={fellows.testimonials} />
+          </StyledCardCarouselContainer>
+          <Spacer spacing="8" />
+        </>
       }
       <Row>
         <Col xs={12} sm={6}>
