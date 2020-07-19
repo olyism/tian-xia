@@ -483,7 +483,7 @@ const CardCarousel = ({ data }) => {
                 <Modal isOpen={modalIsOpen} onRequestClose={closeModal} className="Modal" overlayClassName="Overlay">
                   <StyledCloseButton onClick={closeModal}><img alt="Close icon" src={ic_close} /><span>Close</span></StyledCloseButton>
                   <blockquote>
-                    <StyledModalQuote>"{quote}"</StyledModalQuote>
+                    <StyledModalQuote>"{datum.quote}"</StyledModalQuote>
                     {datum.author && (
                       <footer>
                         <StyledModalAuthor>
