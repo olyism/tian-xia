@@ -18,6 +18,7 @@ import Logo from './Logo';
 
 const StyledLogos = styled.ol`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   list-style: none;
   margin: 0 auto ${SPACING['13']};
@@ -77,11 +78,6 @@ const Logos = ({ assets }) => assets && (
 
 Logos.propTypes = {
   assets: arrayOf(shape({
-    quotes: arrayOf(shape({
-      quote: string.isRequired,
-      author: string.isRequired,
-      footnote: string,
-    })),
     logo: shape({
       extension: string.isRequired,
       publicURL: string.isRequired,
