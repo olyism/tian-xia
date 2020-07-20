@@ -93,10 +93,6 @@ partners:
           author: Caroline Jeanmaire, Director of Strategic Research and Partnerships,  UC
             Berkeley’s Center for Human-Compatible AI
       logo: /img/download-1-.png
-    - partnerName: Effective Giving UK
-      logo: /img/screen-shot-2020-07-17-at-11.05.15-am.png
-    - partnerName: Global Priorities Institute, University of Oxford
-      logo: /img/download.png
 fellows:
   title: Testimonials from our fellows
   testimonials:
