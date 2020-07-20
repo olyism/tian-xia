@@ -94,6 +94,10 @@ TemplateWrapper.propTypes = {
         quote: string,
         author: string,
       })),
+      footerImg: shape({
+        extension: string,
+        publicURL: string,
+      }),
     }),
   }),
 };
