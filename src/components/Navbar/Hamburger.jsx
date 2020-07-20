@@ -123,7 +123,7 @@ const Hamburger = () => {
           <StyledLI><StyledLink href="/#what-we-offer" onClick={closeMenu}>What we offer</StyledLink></StyledLI>
           <StyledLI><StyledLink href="/#testimonials" onClick={closeMenu}>Testimonials</StyledLink></StyledLI>
         </StyledUL>
-        <StyledButton btnStyle="primary-white" to="mailto:info@tian-xia.com">Enquire</StyledButton>
+        <StyledButton btnStyle="primary-white" to="mailto:info@tian-xia.com">Inquire</StyledButton>
       </StyledMenu>
     </>
   );
