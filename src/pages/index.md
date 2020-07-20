@@ -21,7 +21,8 @@ whatWeOffer:
     welfare of future generations. During the program, fellows are expected to
     gain knowledge about AI safety, global catastrophic biological risks, and
     risks from great power conflicts, by visiting relevant organizations and
-    engaging with prominent thinkers in the fields. 
+    engaging with prominent thinkers in the fields. After program completion,
+    the Academy provides a lifelong network for mentorship and collaborations.
 
 
     We support students and early-career professionals who are:
@@ -32,9 +33,6 @@ whatWeOffer:
     * Culturally aware, reflective, and entrepreneurial
 
     * Fluent in English and at least conversational in Mandarin Chinese
-
-
-    The program scales up participants’ capabilities for improving the world and provides a lifelong network for mentorship and collaborations.
 partners:
   title: Organizational engagement
   testimonials:
@@ -131,7 +129,7 @@ fellows:
         AI policy and China. Perhaps most importantly, it was an honour to
         undertake the programme with and learn from a group of such inspiring
         individuals, whom I now consider among my greatest friends.
-    - quote: Solidly the best group experience I have ever had, not even close
+    - quote: Solidly the best group experience I have ever had, not even close.
     - quote: 我非常推荐你申请”天下学者计划“。如果你真正关注人类未来潜力的实现，具备在长远时间尺度、星球尺度上设想人类未来的视野，关注颠覆性技术（人工智能、生物技术等等）可能会对包括人类在内的地球生命带来的生存性风险，并可以将个人的行动和职业生涯规划与之相结合，这个学者计划将是一次非常难得的机会。
     - quote: You will meet people who can help you resolve uncertainties of the
         trade-offs between making the most good for the long-term future and
