@@ -11,7 +11,7 @@ import Col from '../Col';
 import Heading from '../Heading';
 import CardCarousel from '../CardCarousel';
 import Spacer from '../Spacer';
-import img from '../../img/patrick-xu-OMqYNbc0i4A-unsplash.jpg';
+import defaultImg from '../../img/patrick-xu-OMqYNbc0i4A-unsplash.jpg';
 import {
   BREAKPOINTS,
   COLOR,
@@ -21,7 +21,7 @@ import {
 } from '../../constants/theme.js'
 
 const StyledFooter = styled.footer`
-  background: ${COLOR.TUNA} url('${img}') 50% 50% no-repeat;
+  background: ${COLOR.TUNA} url('${({ img }) => img || defaultImg}') 50% 50% no-repeat;
   background-size: cover;
   color: ${COLOR.WHITE};
   padding-bottom: ${SPACING[5]};
@@ -73,7 +73,7 @@ const StyledRightText = styled.div`
 `;
 
 const Footer = ({ fellows }) => (
-  <StyledFooter>
+  <StyledFooter img={fellows.footerImg.publicURL}>
     <StyledFooterContainer>
       {fellows.testimonials && fellows.testimonials.length !== 0 &&
         <>
@@ -108,11 +108,20 @@ Footer.propTypes = {
       quote: string,
       author: string,
     })),
+    footerImg: shape({
+      publicURL: string,
+      extension: string,
+    }),
   }),
 };
 
 Footer.defaultProps = {
-  fellows: {},
+  fellows: {
+    footerImg: {
+      publicURL: '',
+      extension: '',
+    }
+  },
 }
 
 export default Footer;
