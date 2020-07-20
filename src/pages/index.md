@@ -33,6 +33,13 @@ whatWeOffer:
     * Culturally aware, reflective, and entrepreneurial
 
     * Fluent in English and at least conversational in Mandarin Chinese
+callout:
+  title: Get in touch
+  content: Please contact us for more details about the next fellowship round.
+  btn:
+    label: Inquire
+    link: mailto:info@tian-xia.com
+    target: _self
 partners:
   title: Organizational engagement
   testimonials:

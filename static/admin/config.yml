@@ -51,6 +51,25 @@ collections:
             fields:
             - {label: Title, name: title, widget: string}
             - {label: Body, name: body, widget: markdown}
+          - label: Callout
+            name: callout
+            widget: object
+            fields:
+            - {label: Title, name: title, widget: string}
+            - {label: Content, name: title, widget: string}
+            - label: Button
+              name: btn
+              widget: object
+              fields:
+              - {label: Label, name: label, widget: string}
+              - {link: Link, name: link, widget: string}
+              - label: Target
+                name: target
+                widget: select
+                options:
+                - {label: "Same window", value: _self}
+                - {label: "New window", value: _blank}
+                default: _self
           - label: Partners
             name: partners
             widget: object
@@ -75,7 +94,6 @@ collections:
                 - label: Footnote
                   name: footnote
                   widget: string
-                  required: false
           - label: Fellows
             name: fellows
             widget: object
@@ -88,4 +106,4 @@ collections:
               widget: list
               fields:
               - {label: Quote, name: quote, widget: string}
-              - {label: Author, name: author, widget: string, required: false}
+              - {label: Author, name: author, widget: string}

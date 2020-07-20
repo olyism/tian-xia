@@ -12,6 +12,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         hero={data.hero || {}}
         about={data.about || {}}
         whatWeOffer={data.whatWeOffer || {}}
+        callout={data.callout || {}}
         partners={data.partners || {}}
         fellows={data.fellows || {}}
       />

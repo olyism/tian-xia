@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { string } from 'prop-types';
+import { oneOf, shape, string } from 'prop-types';
 import Heading from '../Heading';
 import Paragraph from '../Paragraph';
 import Button from '../Button';
@@ -25,26 +25,33 @@ const StyledParagraph = styled(Paragraph)`
   color: ${COLOR.WHITE};
 `;
 
-const Callout = ({ heading, text, btnLabel, to }) => (
+const Callout = ({ title, content, btn }) => (
   <StyledCallout>
-    <StyledHeading level="3">{heading}</StyledHeading>
-    <StyledParagraph>{text}</StyledParagraph>
-    <Button btnStyle="primary-white" to={to}>{btnLabel}</Button>
+    {title && <StyledHeading level="3">{title}</StyledHeading>}
+    {content && <StyledParagraph>{content}</StyledParagraph>}
+    {btn.label && btn.link && <Button btnStyle="primary-white" to={btn.link}>{btn.label}</Button>}
   </StyledCallout>
 );
 
 Callout.propTypes = {
-  heading: string,
-  text: string,
-  btnLabel: string,
-  to: string,
+  title: string,
+  content: string,
+  btn: shape({
+    label: string,
+    link: string,
+    target: oneOf(['_self', '_blank']),
+  }),
 };
 
 Callout.defaultProps = {
-  heading: 'Get in touch',
-  text: 'Please contact us for more details about the next fellowship round.',
-  btnLabel: 'Enquire',
-  to: 'mailto:info@tian-xia.com',
+  title: '',
+  content: '',
+  btn: {
+    label: '',
+    link: '',
+    target: '_self',
+  },
+
 };
 
 export default Callout;

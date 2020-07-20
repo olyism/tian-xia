@@ -33,6 +33,7 @@ export const IndexPageTemplate = ({
   hero,
   about,
   whatWeOffer,
+  callout,
   partners
 }) => (
   <>
@@ -58,7 +59,7 @@ export const IndexPageTemplate = ({
         <Typography>
           <ReactMarkdown source={whatWeOffer.body} />
         </Typography>
-        <Callout />
+        <Callout title={callout.title} content={callout.content} btn={callout.btn} />
       </StyledContent>
     </section>
     {partners.testimonials && 
@@ -80,13 +81,14 @@ IndexPageTemplate.propTypes = {
   hero: PropTypes.object,
   about: PropTypes.object,
   whatWeOffer: PropTypes.object,
+  callout: PropTypes.object,
   partners: PropTypes.object,
   fellows: PropTypes.object,
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+console.log(frontmatter);
   return (
     <Layout data={{fellows: frontmatter.fellows}}>
       <IndexPageTemplate
@@ -94,6 +96,7 @@ const IndexPage = ({ data }) => {
         hero={frontmatter.hero}
         about={frontmatter.about}
         whatWeOffer={frontmatter.whatWeOffer}
+        callout={frontmatter.callout}
         partners={frontmatter.partners}
         fellows={frontmatter.fellows}
       />
@@ -131,6 +134,15 @@ export const pageQuery = graphql`
         whatWeOffer {
           title
           body
+        }
+        callout {
+          title
+          content
+          btn {
+            label
+            link
+            target
+          }
         }
         partners {
           title

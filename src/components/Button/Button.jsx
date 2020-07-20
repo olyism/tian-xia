@@ -8,9 +8,10 @@ import {
   LINE_HEIGHT,
 } from '../../constants/theme.js'
 
-const ButtonStyle = ({ tagName, to, btnStyle, className, children }) => {
+const ButtonStyle = ({ tagName, to, btnStyle, target, className, children }) => {
   const TagName = tagName;
-  return <TagName className={className} type="button" href={to}>{children}</TagName>
+  const targetProp = tagName === 'a' && target !== '_self' ? target : '';
+  return <TagName className={className} type="button" href={to} target={targetProp}>{children}</TagName>
 };
 
 const Button = styled(ButtonStyle)`
@@ -73,6 +74,7 @@ Button.propTypes = {
   tagName: oneOf(['a', 'button']),
   to: string,
   btnStyle: oneOf(['default', 'primary', 'default-white', 'primary-white']),
+  target: oneOf(['_self', '_blank']),
   className: string,
   children: oneOfType([
     arrayOf(node),
@@ -84,6 +86,7 @@ Button.defaultProps = {
   tagName: 'a',
   btnStyle: 'default',
   to: '',
+  target: '_self',
   className: '',
 };
 
