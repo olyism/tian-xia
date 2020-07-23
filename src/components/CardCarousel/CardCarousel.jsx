@@ -435,18 +435,20 @@ const CardCarousel = ({ data }) => {
     infinite: false,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
       {
         breakpoint: 1023,
         settings: {
+          slidesToScroll: 2,
           slidesToShow: 2,
         }
       },
       {
         breakpoint: 767,
         settings: {
+          slidesToScroll: 1,
           slidesToShow: 1,
         }
       },
