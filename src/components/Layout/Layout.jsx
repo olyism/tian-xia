@@ -8,8 +8,9 @@ import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { withPrefix } from 'gatsby';
 import TypographyStyles from './TypographyStyles';
-import Footer from '../Footer';
+import ModalStyles from './ModalStyles';
 import Navbar from '../Navbar';
+import Footer from '../Footer';
 import { CONTEXTUAL_COLOR } from '../../constants/theme';
 import useSiteMetadata from '../SiteMetadata';
 
@@ -79,12 +80,13 @@ const TemplateWrapper = ({ data, children }) => {
       </Helmet>
       <ResetStyles />
       <TypographyStyles />
+      <ModalStyles />
       <Navbar />
       <main>{children}</main>
       <Footer {...data} />
     </>
   )
-}
+};
 
 TemplateWrapper.propTypes = {
   data: shape({

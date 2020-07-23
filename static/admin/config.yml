@@ -56,7 +56,7 @@ collections:
             widget: object
             fields:
             - {label: Title, name: title, widget: string}
-            - {label: Content, name: title, widget: string}
+            - {label: Content, name: content, widget: string}
             - label: Button
               name: btn
               widget: object
