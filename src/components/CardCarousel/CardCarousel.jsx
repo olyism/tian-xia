@@ -349,8 +349,6 @@ const SlickStyles = createGlobalStyle`
 }
 `;
 
-Modal.setAppElement('#___gatsby');
-
 const StyledSliderContainer = styled.div`
   padding: 0 25px;
 `;
@@ -396,7 +394,7 @@ const StyledModalAuthor = styled.p`
   font-size: 16px;
   font-weight: bold;
   line-height: 24px;
-  margin-bottom: 0;
+  margin-bottom: ${SPACING['8']};
 `;
 
 const StyledCloseButton = styled.button`
