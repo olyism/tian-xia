@@ -452,52 +452,71 @@ const CardCarousel = ({ data }) => {
     ]
   };
 
+  const [modalData, setModalData] = useState({
+    quote: '',
+    author: '',
+  });
+  const renderModalData = ({ quote, author }) => {
+    setModalData({
+      quote,
+      author,
+    });
+  };
+  const clearModalData = () => {
+    setModalData({
+      quote: '',
+      author: '',
+    });
+  };
+
   const [ modalIsOpen, setIsOpen ] = useState(false);
-  const openModal = () => { 
+  const openModal = (data) => { 
+    renderModalData(data);
     setIsOpen(true); 
   };
   const closeModal = () => {
+    clearModalData();
     setIsOpen(false);
   };
 
   return (
-    <StyledSliderContainer>
-      <SlickStyles />
-      <Slider {...settings}>
-        {data.map((datum, i) => {
-          const quote = datum.quote.length > charMaxLen ?
-            `${datum.quote.substring(0, charMaxLen)}…` :
-            `${datum.quote}`;
+    <>
+      <StyledSliderContainer>
+        <SlickStyles />
+        <Slider {...settings}>
+          {data.map((datum, i) => {
+            const quotePreview = datum.quote.length > charMaxLen ?
+              `${datum.quote.substring(0, charMaxLen)}…` :
+              `${datum.quote}`;
 
-          return (
-            <StyledCard quote={quote} author={datum.author} key={`fellow-testimonial-${i}`}>
-              <StyledCardQuote>
-                {`"${quote}" `}
-                {datum.quote.length > charMaxLen && (
-                  <StyledReadMore onClick={openModal}>Read more</StyledReadMore>
-                )}
-              </StyledCardQuote>
-              {datum.author && <StyledCardAuthor>{datum.author}</StyledCardAuthor>}
-              {datum.quote.length > charMaxLen && (
-                <Modal isOpen={modalIsOpen} onRequestClose={closeModal} className="Modal" overlayClassName="Overlay">
-                  <StyledCloseButton onClick={closeModal}><img alt="Close icon" src={ic_close} /><span>Close</span></StyledCloseButton>
-                  <blockquote>
-                    <StyledModalQuote>"{datum.quote}"</StyledModalQuote>
-                    {datum.author && (
-                      <footer>
-                        <StyledModalAuthor>
-                          {datum.author}
-                        </StyledModalAuthor>
-                      </footer>
-                    )}
-                  </blockquote>
-                </Modal>
-              )}
-            </StyledCard>
-          );
-        })}
-      </Slider>
-    </StyledSliderContainer>
+            return (
+              <StyledCard quote={quotePreview} author={datum.author} key={`fellow-testimonial-${i}`}>
+                <StyledCardQuote>
+                  {`"${quotePreview}" `}
+                  {datum.quote.length > charMaxLen && (
+                    <StyledReadMore onClick={() => openModal({quote: datum.quote, author: datum.author})}>Read more</StyledReadMore>
+                  )}
+                </StyledCardQuote>
+                {datum.author && <StyledCardAuthor>{datum.author}</StyledCardAuthor>}
+              </StyledCard>
+            );
+          })}
+        </Slider>
+      </StyledSliderContainer>
+      <Modal isOpen={modalIsOpen} onRequestClose={() => closeModal()} className="Modal" overlayClassName="Overlay">
+        <StyledCloseButton onClick={() => closeModal()}><img alt="Close icon" src={ic_close} /><span>Close</span></StyledCloseButton>
+        <blockquote>
+          <StyledModalQuote>"{modalData.quote}"</StyledModalQuote>
+          {modalData.author && (
+            <footer>
+              <StyledModalAuthor>
+                {modalData.author}
+              </StyledModalAuthor>
+            </footer>
+          )}
+        </blockquote>
+      </Modal>
+    </>
   );
 };
 
