@@ -58,7 +58,6 @@ partners:
             involved in long-term thinking.
           author: Jade Leung, Head of Research and Partnerships, Center for the Governance
             of AI, University of Oxford
-          isPreviouslyEmployed: false
           footnote: The individuals and their titles reflect the time when the program
             engagement took place.
         - quote: The Tianxia fellows were bright and engaged. They had a wide range of
@@ -81,7 +80,6 @@ partners:
             the fellows has put us in touch with a high profile entrepreneur
             working on improving science.
           author: John Halstead, Head of Applied Research, Founders Pledge
-          isPreviouslyEmployed: false
     - partnerName: 80,000 Hours
       logo: /img/og-logo_0.png
       quotes:
@@ -89,7 +87,6 @@ partners:
             and the diversity of their backgrounds. We'd be keen to stay
             involved in future years.
           author: Benjamin Todd, CEO and co-founder, 80,000 Hours
-          isPreviouslyEmployed: false
     - partnerName: CHAI
       quotes:
         - quote: We organized a workshop with the Fellows in April 2020. We found our

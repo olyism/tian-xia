@@ -53,7 +53,7 @@ const StyledFootnote = styled.p`
   color: ${CONTEXTUAL_COLOR.SUBTEXT};
   font-size: ${FONT_SIZE.SUBTEXT};
   line-height: ${LINE_HEIGHT.SUBTEXT};
-  margin-bottom: 0;
+  margin: .5rem 0 0;
 `;
 
 const LogoContent = ({ quotes }) => (
@@ -68,9 +68,9 @@ const LogoContent = ({ quotes }) => (
               {author && (
                 <footer>
                   <StyledAuthor>
-                    {author}
+                    {author}{footnote && '*'}
                   </StyledAuthor>
-                  {footnote && <StyledFootnote>{footnote}</StyledFootnote>}
+                  {footnote && <StyledFootnote>*{footnote}</StyledFootnote>}
                 </footer>
               )}
             </StyledBlockquote>

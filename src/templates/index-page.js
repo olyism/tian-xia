@@ -154,7 +154,7 @@ export const pageQuery = graphql`
             quotes {
               quote
               author
-              isPreviouslyEmployed
+              footnote
             }
           }
         }
