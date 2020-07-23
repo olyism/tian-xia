@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.3",
-  "author": "Austin Green",
+  "name": "tian-xia",
+  "description": "Tianxia Fellowship website, powered by Gatsby and NetlifyCMS",
+  "version": "1.0.0",
+  "author": "Oly Su",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "classnames": "^2.2.6",
