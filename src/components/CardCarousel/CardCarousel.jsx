@@ -69,14 +69,18 @@ const SlickStyles = createGlobalStyle`
 
 .slick-track
 {
-    position: relative;
+    align-items: stretch;
     top: 0;
     left: 0;
-
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
 }
+
+[dir='rtl'] .slick-track {
+  flex-direction: row-reverse;
+}
+
 .slick-track:before,
 .slick-track:after
 {
@@ -96,15 +100,9 @@ const SlickStyles = createGlobalStyle`
 .slick-slide
 {
     display: none;
-    float: left;
-
-    height: 100%;
     min-height: 1px;
 }
-[dir='rtl'] .slick-slide
-{
-    float: right;
-}
+
 .slick-slide img
 {
     display: block;
@@ -119,7 +117,7 @@ const SlickStyles = createGlobalStyle`
 }
 .slick-initialized .slick-slide
 {
-    display: block;
+    display: flex;
 }
 .slick-loading .slick-slide
 {
@@ -363,9 +361,8 @@ const StyledCard = styled.article`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
+  height: 100%;
   padding: ${SPACING['8']};
-  height: 320px;
   margin: 0 20px;
   width: auto !important;
 `;
