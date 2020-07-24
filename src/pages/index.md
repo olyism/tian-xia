@@ -116,6 +116,8 @@ fellows:
         impressive. I’d highly recommend the Tianxia Fellowship and I'm excited
         to stay involved in the community.
       author: Research Engineer Intern at DeepMind (2020 US)
+    - quote: This is one of the most valuable programs in my life.
+      author: Founder of University AI (2020 US)
     - quote: If you are interested in China and care about humanity's long-term
         future, the Tianxia Fellowship is THE fellowship for you. Everyone that
         I met through the fellowship is ambitious, hard-working, and above all,
@@ -181,22 +183,15 @@ fellows:
         key organisations and researchers in such a way that there were always
         rich insights to gain regardless of the individual's degree of
         familiarity with long-term thinking. Throughout the programme, I
-        received many questions regarding China that evinced people's deep
-        curiosity and enthusiasm for the Tianxia fellowship. Not only was this
-        an immensely refreshing and affirming experience but it also helped
-        fellows gauge how best to guide future research and bridge understanding
-        in the community. For instance, as a direct consequence of conversations
-        from one of the fellowship events, I will be working with some of the
-        fellows to create a research agenda for China's AI strategy. I also
-        hugely benefited from the career guidance received over the course of
-        the programme and getting to know more people working in macrostrategy
-        cause areas; there were fantastic opportunities to bounce ideas around
-        which clarified my aspirations for researching the intersection between
-        AI policy and China. Perhaps most importantly, it was an honour to
-        undertake the programme with and learn from a group of such inspiring
-        individuals, whom I now consider among my greatest friends.
-      author: Research Assistant to Baobao Zhang, Center for the Governance of AI,
-        University of Oxford (2019 UK)
+        received many questions regarding China from our partners that evinced
+        their deep curiosity about and enthusiasm for the Tianxia fellowship.
+        Not only was this an immensely refreshing and affirming experience but
+        it also helped fellows gauge how best to guide future research and
+        bridge understanding in the community. Perhaps most importantly, it was
+        an honour to undertake the programme with and learn from a group of such
+        inspiring individuals, whom I now consider among my greatest friends.
+      author: Yenching Scholar and Former Global Public Policy Consultant to ByteDance
+        (2019 UK)
     - quote: Solidly the best group experience I have ever had, not even close.
       author: Anonymous (2019 UK)
     - quote: You will meet people who can help you resolve uncertainties of the
