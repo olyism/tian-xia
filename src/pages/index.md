@@ -4,7 +4,7 @@ title: Tianxia Academy Fellowship
 hero:
   heading: Tianxia Academy Fellowship
   subheading: Empowering people towards creating grand futures
-  image: /img/dennis-kummer-52geprmkp7m-unsplash.jpg
+  image: /img/robynne-hu-ivytafsn9hk-unsplash.jpg
 about:
   title: About us
   body: The world faces ever more complex and critical challenges. In an era of
@@ -69,6 +69,7 @@ partners:
             organise another workshop with them.
           author: Rose Hadshar, Project Manager, Research Scholars Programme,  Future of
             Humanity Institute, University of Oxford
+          footnote: " "
     - partnerName: Founders Pledge
       logo: /static/img/logo-founders-pledge.svg
       quotes:
@@ -80,6 +81,7 @@ partners:
             the fellows has put us in touch with a high profile entrepreneur
             working on improving science.
           author: John Halstead, Head of Applied Research, Founders Pledge
+          footnote: " "
     - partnerName: 80,000 Hours
       logo: /img/og-logo_0.png
       quotes:
@@ -87,6 +89,7 @@ partners:
             and the diversity of their backgrounds. We'd be keen to stay
             involved in future years.
           author: Benjamin Todd, CEO and co-founder, 80,000 Hours
+          footnote: " "
     - partnerName: CHAI
       quotes:
         - quote: We organized a workshop with the Fellows in April 2020. We found our
@@ -96,6 +99,7 @@ partners:
             collaborations on beneficial and safe AI.
           author: Caroline Jeanmaire, Director of Strategic Research and Partnerships,  UC
             Berkeley’s Center for Human-Compatible AI
+          footnote: " "
       logo: /img/download-1-.png
 fellows:
   title: Testimonials from our fellows
