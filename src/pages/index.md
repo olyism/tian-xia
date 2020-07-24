@@ -142,7 +142,7 @@ fellows:
         into improving the world. I truly appreciate this opportunity to embark
         on a journey of thinking big and learning big with a group of
         goal-aligned fellows.
-      author: Research Intern at Huawei (2020 US)
+      author: Research Intern at a major Chinese AI lab (2020 US)
     - quote: "To me, of the 3 main parts of the program: reading preparations,
         partners (organizations we had the chance to speak with), and people
         (fellow participants), each part in itself is already easily one of the
