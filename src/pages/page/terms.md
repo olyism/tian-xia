@@ -4,7 +4,7 @@ title: Terms of use
 date: 2020-07-07T01:56:41.326Z
 featuredimage: /img/chemex.jpg
 ---
-Your privacy is important to us. It is Tianxia Fellowship's policy to respect your privacy regarding any information we may collect from you across our website, https://www.tian-xia.com.
+Your privacy is important to us. It is Tianxia Academy's policy to respect your privacy regarding any information we may collect from you across our website, https://www.tian-xia.com.
 
 ## Collection of personal information
 
