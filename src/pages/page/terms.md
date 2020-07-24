@@ -4,7 +4,7 @@ title: Terms of use
 date: 2020-07-07T01:56:41.326Z
 featuredimage: /img/chemex.jpg
 ---
-Your privacy is important to us. It is Tian Xia Fellowship's policy to respect your privacy regarding any information we may collect from you across our website, https://www.tian-xia.com.
+Your privacy is important to us. It is Tianxia Fellowship's policy to respect your privacy regarding any information we may collect from you across our website, https://www.tian-xia.com.
 
 ## Collection of personal information
 
@@ -18,16 +18,16 @@ You are free to refuse our request for your personal information, with the under
 
 We collect personal information from you, including information about your:
 
-- name
-- contact information
+* name
+* contact information
 
 We collect your personal information in order to:
 
-- respond to visitors' questions and inquiries
+* respond to visitors' questions and inquiries
 
 Besides our staff, we share this information with:
 
-- Google Forms: in order to provide an online form interface to make it easier for visitors to submit their information and for us to process these information with greater efficiency..
+* Google Forms: in order to provide an online form interface to make it easier for visitors to submit their information and for us to process these information with greater efficiency..
 
 If you choose not to enter your name and contact details, we'll be unable to respond to your inquiries.
 
@@ -37,4 +37,4 @@ You have the right to ask for a copy of any personal information we hold about y
 
 ## Web analytics
 
-We use the [Matomo](https://matomo.org/privacy/) web analytics software to track user activity on https://www.tian-xia.com to help us better understand the website's user experience to improve our service for you. 
+We use the [Matomo](https://matomo.org/privacy/) web analytics software to track user activity on https://www.tian-xia.com to help us better understand the website's user experience to improve our service for you.
