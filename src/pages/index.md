@@ -69,7 +69,7 @@ partners:
             organise another workshop with them.
           author: Rose Hadshar, Project Manager, Research Scholars Programme,  Future of
             Humanity Institute, University of Oxford
-          footnote: " "
+          footnote: _
     - partnerName: Founders Pledge
       logo: /static/img/logo-founders-pledge.svg
       quotes:
