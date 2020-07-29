@@ -58,8 +58,8 @@ partners:
             involved in long-term thinking.
           author: Jade Leung, Head of Research and Partnerships, Center for the Governance
             of AI, University of Oxford
-          footnote: "The individuals and their titles reflect the time when the program
-            engagement took place. "
+          footnote: The individuals and their titles reflect the time when the program
+            engagement took place.
         - quote: The Tianxia fellows were bright and engaged. They had a wide range of
             interests and backgrounds which tended towards productive
             conversation and research discussions. I was impressed by how game
