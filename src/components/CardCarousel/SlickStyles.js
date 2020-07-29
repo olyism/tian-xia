@@ -163,7 +163,6 @@ const SlickStyles = createGlobalStyle`
 {
     color: transparent;
     outline: none;
-    background: transparent;
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,

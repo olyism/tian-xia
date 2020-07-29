@@ -1,7 +1,7 @@
 {
   "name": "tian-xia",
   "description": "Tianxia Fellowship website, powered by Gatsby and NetlifyCMS",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Oly Su",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
@@ -14,7 +14,7 @@
     "gatsby-plugin-netlify-cms": "^4.2.5",
     "gatsby-plugin-netlify-identity-widget": "^1.1.1",
     "gatsby-plugin-react-helmet": "^3.2.5",
-    "gatsby-plugin-sharp": "^2.5.7",
+    "gatsby-plugin-sharp": "^2.6.23",
     "gatsby-plugin-styled-components": "^3.3.4",
     "gatsby-remark-copy-linked-files": "^2.2.4",
     "gatsby-remark-images": "^3.2.6",
