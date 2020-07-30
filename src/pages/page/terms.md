@@ -33,7 +33,7 @@ If you choose not to enter your name and contact details, we'll be unable to res
 
 We keep your information safe by only only allowing the facilitator and the web administrator to access it.
 
-You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. If you’d like to ask for a copy of your information, or to have it corrected, please contact us at info@tian-xia.com.
+You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. If you’d like to ask for a copy of your information, or to have it corrected, please contact us at [info@tian-xia.com](mailto:info@tian-xia.com).
 
 ## Web analytics
 
