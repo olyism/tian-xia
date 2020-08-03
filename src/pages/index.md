@@ -81,7 +81,7 @@ partners:
             working on improving science.
           author: John Halstead, Head of Applied Research, Founders Pledge
     - partnerName: 80,000 Hours
-      logo: /img/og-logo_0.png
+      logo: /img/logo-80000hours.svg
       quotes:
         - quote: At 80,000 Hours, we were impressed by the calibre of the Tianxia Fellows
             and the diversity of their backgrounds. We'd be keen to stay
