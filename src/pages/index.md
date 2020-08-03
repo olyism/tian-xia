@@ -147,7 +147,7 @@ fellows:
         conversations with partners / speakers condense what would take years to
         learn into weeks, and the fellow participants are motivating and
         amazing. It's just awesome, really worth the time."
-      author: Research Analyst at Eastjade Asset Management (2020 US)
+      author: Research Analyst at Eastjade Asset Management
     - quote: The fellowship was a fantastic way for me to deepen my understanding of
         important issues affecting global coordination and possible solutions
         for addressing them. The regular online sessions and reading assignments
