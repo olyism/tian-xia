@@ -4,7 +4,7 @@ title: Tianxia Academy Fellowship
 hero:
   heading: Tianxia Academy Fellowship
   subheading: Empowering people towards creating grand futures
-  image: /static/img/robynne-hu-ivytafsn9hk-unsplash.jpg
+  image: /img/robynne-hu-ivytafsn9hk-unsplash.jpg
 about:
   title: About us
   body: The world faces ever more complex and critical challenges. In an era of
@@ -44,7 +44,7 @@ partners:
   title: Organizational engagement
   testimonials:
     - partnerName: Center for the Governance of AI, University of Oxford
-      logo: /static/img/screen-shot-2020-07-17-at-10.54.45-am.png
+      logo: /img/screen-shot-2020-07-17-at-10.54.45-am.png
       quotes:
         - quote: I was impressed by the Tianxia Fellowship programme, and would support
             its continuation in the coming years. The fellows who were selected
@@ -70,7 +70,7 @@ partners:
           author: Rose Hadshar, Project Manager, Research Scholars Programme,  Future of
             Humanity Institute, University of Oxford
     - partnerName: Founders Pledge
-      logo: /static/img/logo-founders-pledge.svg
+      logo: /img/logo-founders-pledge.svg
       quotes:
         - quote: The fellows are a highly intelligent, sociable and engaged group at the
             start of their careers, and are mainly focused on long-term issues.
@@ -81,7 +81,7 @@ partners:
             working on improving science.
           author: John Halstead, Head of Applied Research, Founders Pledge
     - partnerName: 80,000 Hours
-      logo: /static/img/og-logo_0.png
+      logo: /img/og-logo_0.png
       quotes:
         - quote: At 80,000 Hours, we were impressed by the calibre of the Tianxia Fellows
             and the diversity of their backgrounds. We'd be keen to stay
@@ -96,7 +96,7 @@ partners:
             collaborations on beneficial and safe AI.
           author: Caroline Jeanmaire, Director of Strategic Research and Partnerships,  UC
             Berkeley’s Center for Human-Compatible AI
-      logo: /static/img/download-1-.png
+      logo: /img/download-1-.png
 fellows:
   title: Testimonials from our fellows
   testimonials:
@@ -197,5 +197,5 @@ fellows:
         UK)
     - quote: 我非常推荐你申请”天下学者计划“。如果你真正关注人类未来潜力的实现，具备在长远时间尺度、星球尺度上设想人类未来的视野，关注颠覆性技术（人工智能、生物技术等等）可能会对包括人类在内的地球生命带来的生存性风险，并可以将个人的行动和职业生涯规划与之相结合，这个学者计划将是一次非常难得的机会。
       author: Graduate student at Tsinghua University (2019 UK)
-  footerImg: /static/img/ken-lawrence-tdpmstdpdum-unsplash.jpg
+  footerImg: /img/ken-lawrence-tdpmstdpdum-unsplash.jpg
 ---
