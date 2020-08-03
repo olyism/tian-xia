@@ -197,5 +197,5 @@ fellows:
         UK)
     - quote: 我非常推荐你申请”天下学者计划“。如果你真正关注人类未来潜力的实现，具备在长远时间尺度、星球尺度上设想人类未来的视野，关注颠覆性技术（人工智能、生物技术等等）可能会对包括人类在内的地球生命带来的生存性风险，并可以将个人的行动和职业生涯规划与之相结合，这个学者计划将是一次非常难得的机会。
       author: Graduate student at Tsinghua University (2019 UK)
-  footerImg: /img/ken-lawrence-tdpmstdpdum-unsplash.jpg
+  footerImg: /static/img/ken-lawrence-tdpmstdpdum-unsplash.jpg
 ---
