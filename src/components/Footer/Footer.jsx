@@ -89,7 +89,7 @@ const Footer = ({ fellows }) => (
       }
       <Row>
         <Col xs={12} sm={6}>
-          Copyright &copy; {new Date().getFullYear()} Tianxia Fellowship. <StyledLink href="/page/terms">Terms of use</StyledLink>
+          Copyright &copy; {new Date().getFullYear()} Tianxia Academy. <StyledLink href="/page/terms">Terms of use</StyledLink>
         </Col>
         <Col xs={12} sm={6}>
           <StyledRightText>
