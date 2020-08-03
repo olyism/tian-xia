@@ -4,11 +4,7 @@ title: Tianxia Academy Fellowship
 hero:
   heading: Tianxia Academy Fellowship
   subheading: Empowering people towards creating grand futures
-<<<<<<< HEAD
-  image: /img/robynne-hu-ivytafsn9hk-unsplash.jpg
-=======
-  heroImage: /static/img/robynne-hu-ivytafsn9hk-unsplash.jpg
->>>>>>> 🚑 Try changing field name image to heroImage
+  image: /static/img/robynne-hu-ivytafsn9hk-unsplash.jpg
 about:
   title: About us
   body: The world faces ever more complex and critical challenges. In an era of
@@ -48,7 +44,7 @@ partners:
   title: Organizational engagement
   testimonials:
     - partnerName: Center for the Governance of AI, University of Oxford
-      logo: /img/screen-shot-2020-07-17-at-10.54.45-am.png
+      logo: /static/img/screen-shot-2020-07-17-at-10.54.45-am.png
       quotes:
         - quote: I was impressed by the Tianxia Fellowship programme, and would support
             its continuation in the coming years. The fellows who were selected
@@ -85,7 +81,7 @@ partners:
             working on improving science.
           author: John Halstead, Head of Applied Research, Founders Pledge
     - partnerName: 80,000 Hours
-      logo: /img/og-logo_0.png
+      logo: /static/img/og-logo_0.png
       quotes:
         - quote: At 80,000 Hours, we were impressed by the calibre of the Tianxia Fellows
             and the diversity of their backgrounds. We'd be keen to stay
@@ -100,7 +96,7 @@ partners:
             collaborations on beneficial and safe AI.
           author: Caroline Jeanmaire, Director of Strategic Research and Partnerships,  UC
             Berkeley’s Center for Human-Compatible AI
-      logo: /img/download-1-.png
+      logo: /static/img/download-1-.png
 fellows:
   title: Testimonials from our fellows
   testimonials:
