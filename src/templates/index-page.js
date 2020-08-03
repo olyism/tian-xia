@@ -41,7 +41,7 @@ export const IndexPageTemplate = ({
       <Hero 
         heading={hero.heading} 
         subheading={hero.subheading} 
-        backgroundImage={hero.image.publicURL}
+        backgroundImage={hero.heroImage.publicURL}
       />
     </section>
     <section id="about-us">
@@ -121,7 +121,7 @@ export const pageQuery = graphql`
         hero {
           heading
           subheading
-          image {
+          heroImage {
             extension
             publicURL
           }

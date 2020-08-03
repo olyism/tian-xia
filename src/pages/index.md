@@ -4,7 +4,11 @@ title: Tianxia Academy Fellowship
 hero:
   heading: Tianxia Academy Fellowship
   subheading: Empowering people towards creating grand futures
+<<<<<<< HEAD
   image: /img/robynne-hu-ivytafsn9hk-unsplash.jpg
+=======
+  heroImage: /static/img/robynne-hu-ivytafsn9hk-unsplash.jpg
+>>>>>>> 🚑 Try changing field name image to heroImage
 about:
   title: About us
   body: The world faces ever more complex and critical challenges. In an era of

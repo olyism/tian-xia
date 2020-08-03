@@ -38,7 +38,7 @@ collections:
             fields: 
             - {label: Heading, name: heading, widget: string}
             - {label: Subheading, name: subheading, widget: string}
-            - {label: Image, name: image, widget: image}
+            - {label: Image, name: heroImage, widget: image}
           - label: About
             name: about
             widget: object
