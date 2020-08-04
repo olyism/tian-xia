@@ -97,6 +97,8 @@ partners:
           author: Caroline Jeanmaire, Director of Strategic Research and Partnerships,  UC
             Berkeley’s Center for Human-Compatible AI
       logo: /img/download-1-.png
+    - partnerName: Center on Long-Term Risks
+      logo: /img/screen-shot-2020-08-04-at-4.37.46-pm.png
 fellows:
   title: Testimonials from our fellows
   testimonials:
