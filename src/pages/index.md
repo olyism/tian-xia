@@ -192,9 +192,9 @@ fellows:
         (2019 UK)
     - quote: Solidly the best group experience I have ever had, not even close.
       author: Anonymous (2019 UK)
-    - quote: You will meet people who can help you resolve uncertainties of the
+    - quote: "You will meet people who can help you resolve uncertainties of the
         trade-offs between making the most good for the long-term future and
-        caring unavoidably for the current sufferings.
+        caring unavoidably for the current sufferings. "
       author: Student majoring in China Studies at the University of Hong Kong (2019
         UK)
     - quote: 我非常推荐你申请”天下学者计划“。如果你真正关注人类未来潜力的实现，具备在长远时间尺度、星球尺度上设想人类未来的视野，关注颠覆性技术（人工智能、生物技术等等）可能会对包括人类在内的地球生命带来的生存性风险，并可以将个人的行动和职业生涯规划与之相结合，这个学者计划将是一次非常难得的机会。
