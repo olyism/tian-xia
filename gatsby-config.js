@@ -33,6 +33,7 @@ module.exports = {
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-netlify-cms-paths',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
