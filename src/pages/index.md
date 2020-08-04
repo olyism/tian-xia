@@ -30,7 +30,7 @@ whatWeOffer:
 
     * Dedicated to accomplishing global humanitarian outcomes for the long-term future
 
-    * Culturally aware, reflective, and entrepreneurial 
+    * Culturally aware, reflective, and entrepreneurial
 
     * Fluent in English and at least conversational in Mandarin Chinese
 callout:
