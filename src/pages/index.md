@@ -96,9 +96,9 @@ partners:
             collaborations on beneficial and safe AI.
           author: Caroline Jeanmaire, Director of Strategic Research and Partnerships,  UC
             Berkeley’s Center for Human-Compatible AI
-      logo: /img/download-1-.png
+      logo: /img/screen-shot-2020-08-05-at-9.50.59-am.png
     - partnerName: Center on Long-Term Risks
-      logo: /img/screen-shot-2020-08-04-at-4.37.46-pm.png
+      logo: /img/screen-shot-2020-08-05-at-9.39.31-am.png
 fellows:
   title: Testimonials from our fellows
   testimonials:
