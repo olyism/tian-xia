@@ -1,7 +1,7 @@
 {
   "name": "tian-xia",
   "description": "Tianxia Fellowship website, powered by Gatsby and NetlifyCMS",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "author": "Oly Su",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
