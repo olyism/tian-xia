@@ -9,9 +9,10 @@ import {
   FONT_STACK, 
   GUTTER_WIDTH, 
   LINE_HEIGHT, 
-  SHADOW, 
+  SHADOW,
   SPACING,
-  Z_INDEX
+  Z_INDEX,
+  NAVBAR_HEIGHT,
 } from '../../constants/theme.js';
 import defaultImg from '../../img/ken-lawrence-tDPMSTDPdUM-unsplash.jpg';
 
@@ -22,15 +23,13 @@ const StyledBackground = styled.div`
   box-sizing: border-box;
   display: flex;
   min-height: 450px;
-  padding-bottom: ${SPACING['13']};
   padding-left: ${GUTTER_WIDTH};
   padding-right: ${GUTTER_WIDTH};
-  padding-top: 80px;
+  padding-top: ${NAVBAR_HEIGHT};
   position: relative;
 
   @media (min-width: ${BREAKPOINTS.SM}) {
     min-height: 667px;
-    padding-bttom: ${SPACING['0']};
   }
 `;
 
@@ -50,7 +49,8 @@ const StyledGradient = styled.div`
 const StyledHeadingGroup = styled.article`
   margin: 0 auto;
   max-width: 738px;
-  padding-bottom: ${SPACING['13']}
+  padding-bottom: ${SPACING['8']};
+  padding-top: ${SPACING['8']};
   position: relative;
   z-index: ${Z_INDEX.FLOATING};
 `;

@@ -243,6 +243,8 @@ const Z_INDEX = {
   OVERLAY: 200,
 };
 
+const NAVBAR_HEIGHT = `${BROWSER_CONTEXT * 21}px`;
+
 export {
   BROWSER_CONTEXT,
   GUTTER_WIDTH,
@@ -261,4 +263,5 @@ export {
   BORDER_RADIUS,
   SHADOW,
   Z_INDEX,
+  NAVBAR_HEIGHT,
 };

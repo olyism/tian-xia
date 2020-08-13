@@ -1,17 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Container from '../components/Container';
-import Heading from '../components/Heading';
 import Layout from '../components/Layout';
+import PageHeader from '../components/PageHeader';
 import Spacer from '../components/Spacer';
+import Typography from '../components/Typography';
 import Content, { HTMLContent } from '../components/Content';
-
-const StyledPageHeader = styled.div`
-  padding-top: 120px;
-`;
 
 export const PageTemplate = ({
   content,
@@ -24,15 +20,13 @@ export const PageTemplate = ({
   return (
     <>
       {helmet || ''}
-      <section className="section">
-        <StyledPageHeader>
-          <Container>
-            <Heading level={1}>{title}</Heading>
-          </Container>
-        </StyledPageHeader>
+      <PageHeader title={title} />
+      <section>
         <Container>
           <article>
-            <PostContent content={content} />
+            <Typography>
+              <PostContent content={content} />
+            </Typography>
           </article>
         </Container>
       </section>
