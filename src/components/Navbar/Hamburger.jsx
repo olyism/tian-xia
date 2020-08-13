@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { 
   BREAKPOINTS, 
@@ -90,7 +91,7 @@ const StyledLI = styled.li`
   text-align: center;
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   color: ${COLOR.WHITE};
   text-decoration: none;
 `;
@@ -118,10 +119,10 @@ const Hamburger = () => {
       </StyledHamburger>
       <StyledMenu menuIsOpen={menuIsOpen}>
         <StyledUL>
-          <StyledLI><StyledLink href="/#home" onClick={closeMenu}>Home</StyledLink></StyledLI>
-          <StyledLI><StyledLink href="/#about-us" onClick={closeMenu}>About us</StyledLink></StyledLI>
-          <StyledLI><StyledLink href="/#what-we-offer" onClick={closeMenu}>What we offer</StyledLink></StyledLI>
-          <StyledLI><StyledLink href="/#testimonials" onClick={closeMenu}>Testimonials</StyledLink></StyledLI>
+          <StyledLI><StyledLink to="/#home" onClick={closeMenu}>Home</StyledLink></StyledLI>
+          <StyledLI><StyledLink to="/#about-us" onClick={closeMenu}>About us</StyledLink></StyledLI>
+          <StyledLI><StyledLink to="/#what-we-offer" onClick={closeMenu}>What we offer</StyledLink></StyledLI>
+          <StyledLI><StyledLink to="/#testimonials" onClick={closeMenu}>Testimonials</StyledLink></StyledLI>
         </StyledUL>
         <StyledButton btnStyle="primary-white" to="mailto:info@tian-xia.com">Inquire</StyledButton>
       </StyledMenu>

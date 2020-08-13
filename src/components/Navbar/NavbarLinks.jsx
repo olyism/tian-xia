@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
 import Scrollspy from 'react-scrollspy';
 import { BREAKPOINTS, COLOR, CONTEXTUAL_COLOR, SPACING } from '../../constants/theme.js';
@@ -26,7 +27,7 @@ const StyledScrollspy = styled(Scrollspy)`
   margin: 0;
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   border-bottom: 2px solid ${COLOR.WHITE};
   box-sizing: border-box;
   color: ${CONTEXTUAL_COLOR.HEADING};
@@ -56,10 +57,10 @@ const NavbarLinks = () => (
         currentClassName="is-current-nav-link"
         componentTag="div"
       >
-        <StyledLink href="/#home">Home</StyledLink>
-        <StyledLink href="/#about-us">About us</StyledLink>
-        <StyledLink href="/#what-we-offer">What we offer</StyledLink>
-        <StyledLink href="/#testimonials">Testimonials</StyledLink>
+        <StyledLink to="/#home">Home</StyledLink>
+        <StyledLink to="/#about-us">About us</StyledLink>
+        <StyledLink to="/#what-we-offer">What we offer</StyledLink>
+        <StyledLink to="/#testimonials">Testimonials</StyledLink>
       </StyledScrollspy>
       <StyledButton btnStyle="primary" to="mailto:info@tian-xia.com">Inquire</StyledButton>
     </StyledNav>

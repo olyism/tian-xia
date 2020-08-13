@@ -2,7 +2,14 @@ import React from 'react'
 import styled from 'styled-components';
 import { Link } from 'gatsby'
 import Container from '../Container';
-import { BROWSER_CONTEXT, COLOR, SHADOW, SPACING, Z_INDEX } from '../../constants/theme.js';
+import {
+  BROWSER_CONTEXT,
+  COLOR,
+  SHADOW,
+  SPACING,
+  Z_INDEX,
+  NAVBAR_HEIGHT
+} from '../../constants/theme.js';
 import Hamburger from './Hamburger';
 import NavbarLinks from './NavbarLinks';
 import logo from '../../img/logo.svg'
@@ -11,6 +18,7 @@ const StyledNavbar = styled.div`
   background: ${COLOR.WHITE};
   box-shadow: ${SHADOW.BOX};
   box-sizing: border-box;
+  height: ${NAVBAR_HEIGHT};
   left: 0px;
   position: fixed;
   top: 0px;

@@ -8,6 +8,7 @@ import Container from '../components/Container';
 import Divider from '../components/Divider';
 import Hero from '../components/Hero';
 import Heading from '../components/Heading';
+import Section from '../components/Section';
 import Typography from '../components/Typography';
 import Callout from '../components/Callout';
 import Logos from '../components/Logos';
@@ -37,23 +38,23 @@ export const IndexPageTemplate = ({
   partners
 }) => (
   <>
-    <section id="home">
+    <Section id="home">
       <Hero 
         heading={hero.heading} 
         subheading={hero.subheading} 
         backgroundImage={hero.heroImage.publicURL}
       />
-    </section>
-    <section id="about-us">
+    </Section>
+    <Section id="about-us">
       <StyledContent>
         <Heading>{about.title}</Heading>
         <Typography>
           <ReactMarkdown source={about.body} />
         </Typography>
       </StyledContent>
-    </section>
+    </Section>
     <Divider />
-    <section id="what-we-offer">
+    <Section id="what-we-offer">
       <StyledContent>
         <Heading>{whatWeOffer.title}</Heading>
         <Typography>
@@ -61,16 +62,16 @@ export const IndexPageTemplate = ({
         </Typography>
         <Callout title={callout.title} content={callout.content} btn={callout.btn} />
       </StyledContent>
-    </section>
+    </Section>
     {partners.testimonials && 
       <>
         <Divider />
-        <section id="testimonials">
+        <Section id="testimonials">
           <Container>
             {partners.title && <StyledHeading>{partners.title}</StyledHeading>}
             <Logos assets={partners.testimonials} />
           </Container>
-        </section>
+        </Section>
       </>
     }
   </>
