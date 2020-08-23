@@ -97,6 +97,8 @@ partners:
           author: Caroline Jeanmaire, Director of Strategic Research and Partnerships,  UC
             Berkeley’s Center for Human-Compatible AI
       logo: /img/screen-shot-2020-08-05-at-9.50.59-am.png
+    - partnerName: Global Priorities Institute
+      logo: /img/cropped-gpi_website_logo-1.png
     - partnerName: Center on Long-Term Risks
       logo: /img/screen-shot-2020-08-05-at-9.39.31-am.png
     - partnerName: Effective Giving UK
