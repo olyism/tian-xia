@@ -101,8 +101,8 @@ partners:
       logo: /img/cropped-gpi_website_logo-1.png
     - partnerName: Center on Long-Term Risks
       logo: /img/screen-shot-2020-08-05-at-9.39.31-am.png
-    - partnerName: Effective Giving UK
-      logo: /img/screen-shot-2020-08-05-at-9.54.42-am.png
+    - partnerName: Longview Philanthropy
+      logo: /img/screen-shot-2020-11-17-at-1.55.17-pm.png
 fellows:
   title: Testimonials from our fellows
   testimonials:
